@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class ShipController : MonoBehaviour {
 
-	private Animation anim;
+	//private Animation anim;
 
 	private Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animation> ();
+		//anim = GetComponent<Animation> ();
 		rb = GetComponent<Rigidbody> ();
 	}
 
@@ -25,19 +25,19 @@ public class ShipController : MonoBehaviour {
 		//transform.position += new Vector3(0,0,y/10);
 		//transform.position += new Vector3(x/10,0,0);
 
-		Vector3 movement = new Vector3 (x, 0.0f, y);
+		Vector3 movement = new Vector3 (x/10, 0.0f, y/10);
 
 		//enter trumps speed here!!!
-		rb.velocity = movement * 4f;
+		rb.velocity = movement * 2f;
 
 		if (x != 0 && y != 0) {
 			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, Mathf.Atan2 (x, y) * Mathf.Rad2Deg, transform.eulerAngles.z);
 		}
 
-		if (x != 0 || y != 0) {
-			anim.Play ("walk");
-		} else {
-			anim.Play ("idle");
-		}
+		//if (x != 0 || y != 0) {
+			//anim.Play ("walk");
+		//} else {
+			//anim.Play ("idle");
+		//}
 	}	
 }

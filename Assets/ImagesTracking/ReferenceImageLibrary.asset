@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5345560405591032214
+  m_GuidHigh: 17604584967884320158
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4689287348372906738
+      m_GuidHigh: 6532530773561105039
+    m_SerializedTextureGuid:
+      m_GuidLow: 10684391757796194959
+      m_GuidHigh: 5297798656349716104
+    m_Size: {x: 0.1, y: 0.054384615}
+    m_SpecifySize: 1
+    m_Name: Castle
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5084039447174436490
+      m_GuidHigh: 15184154556543065535
+    m_SerializedTextureGuid:
+      m_GuidLow: 13039889477444694134
+      m_GuidHigh: 17299149617819641785
+    m_Size: {x: 0.1, y: 0.075}
+    m_SpecifySize: 1
+    m_Name: ship
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5705087353095752025
+      m_GuidHigh: 1932796830683755416
+    m_SerializedTextureGuid:
+      m_GuidLow: 4935423992489969673
+      m_GuidHigh: 10136889482248348329
+    m_Size: {x: 0.1, y: 0.10428016}
+    m_SpecifySize: 1
+    m_Name: GhostBook
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5683071137197152843
+      m_GuidHigh: 7135391881039338159
+    m_SerializedTextureGuid:
+      m_GuidLow: 9569534837334185766
+      m_GuidHigh: 1558355129040653785
+    m_Size: {x: 0.1, y: 0.0659271}
+    m_SpecifySize: 1
+    m_Name: LondonOly
+    m_Texture: {fileID: 0}

@@ -4,8 +4,14 @@ ScriptsOnlyBuild:
     - UnityStandardAssets.CrossPlatformInput.Joystick
     - UnityStandardAssets.CrossPlatformInput.MobileControlRig
     Assembly-CSharp.dll:
-    - ARTapToPlaceObject
+    - Billboard
+    - PlayerButton
+    - ReleaseButton
+    - ShipButton
     - ShipController
+    - ShipTrigger
+    - TapToPlaceObject
+    - TrackedImageInfoMultipleManager
     - TrackedObjectInfoManager
     - manController
     Unity.Rider.Editor.dll:
@@ -14,7 +20,6 @@ ScriptsOnlyBuild:
     - UnityEngine.XR.ARFoundation.ARCameraBackground
     - UnityEngine.XR.ARFoundation.ARCameraManager
     - UnityEngine.XR.ARFoundation.ARInputManager
-    - UnityEngine.XR.ARFoundation.ARPlane
     - UnityEngine.XR.ARFoundation.ARPlaneManager
     - UnityEngine.XR.ARFoundation.ARPoseDriver
     - UnityEngine.XR.ARFoundation.ARRaycastManager
@@ -51,9 +56,11 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/arthree.unity:
     - Class: 1
@@ -93,21 +100,25 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11224}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11240}
+      Script: {instanceID: 11238}
     - Class: 114
-      Script: {instanceID: 11506}
+      Script: {instanceID: 11452}
     - Class: 114
-      Script: {instanceID: 11552}
+      Script: {instanceID: 11502}
     - Class: 114
-      Script: {instanceID: 11720}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11716}
     - Class: 114
-      Script: {instanceID: 11954}
+      Script: {instanceID: 11744}
     - Class: 114
-      Script: {instanceID: 11992}
+      Script: {instanceID: 11942}
+    - Class: 114
+      Script: {instanceID: 11952}
+    - Class: 114
+      Script: {instanceID: 12048}
     - Class: 114
       Script: {instanceID: 12054}
     - Class: 114
@@ -115,38 +126,50 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12482}
+      Script: {instanceID: 12326}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12424}
     - Class: 114
-      Script: {instanceID: 12560}
+      Script: {instanceID: 12430}
     - Class: 114
-      Script: {instanceID: 12586}
+      Script: {instanceID: 12488}
     - Class: 114
-      Script: {instanceID: 12834}
+      Script: {instanceID: 12506}
     - Class: 114
-      Script: {instanceID: 12890}
+      Script: {instanceID: 12522}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 12568}
     - Class: 114
-      Script: {instanceID: 12988}
+      Script: {instanceID: 12594}
     - Class: 114
-      Script: {instanceID: 13228}
+      Script: {instanceID: 12702}
     - Class: 114
-      Script: {instanceID: 13374}
+      Script: {instanceID: 12898}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 12980}
     - Class: 114
-      Script: {instanceID: 13510}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 13602}
+      Script: {instanceID: 13236}
     - Class: 114
-      Script: {instanceID: 13756}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13794}
+      Script: {instanceID: 13412}
     - Class: 114
-      Script: {instanceID: 13876}
+      Script: {instanceID: 13434}
+    - Class: 114
+      Script: {instanceID: 13520}
+    - Class: 114
+      Script: {instanceID: 13612}
+    - Class: 114
+      Script: {instanceID: 13766}
+    - Class: 114
+      Script: {instanceID: 13804}
+    - Class: 114
+      Script: {instanceID: 13886}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -223,12 +246,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NewBehaviourScript
   - hash:
       serializedVersion: 2
       Hash: 3748fbad2d474a315bda516b8363a0c5
@@ -537,6 +554,12 @@ ScriptsOnlyBuild:
     className: CarUserControl
   - hash:
       serializedVersion: 2
+      Hash: 871a6cb558c0c229aa12c17286b6eb17
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TapToPlaceObject
+  - hash:
+      serializedVersion: 2
       Hash: d251bf88db6c95a6b1aa0b69298da9ef
     assemblyName: UnityEngine.SpatialTracking.dll
     namespaceName: UnityEngine.SpatialTracking
@@ -553,6 +576,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPlane
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShipTrigger
   - hash:
       serializedVersion: 2
       Hash: db1f205a8c9dae1c39098cd23fc97f63
@@ -699,6 +728,12 @@ ScriptsOnlyBuild:
     className: ARKitLoader
   - hash:
       serializedVersion: 2
+      Hash: b79cc055d056555f42c5f7bce7cd1456
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ReleaseButton
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -747,10 +782,22 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: eda1e2e20d718d4689282150cc862691
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TrackedImageInfoMultipleManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Characters.ThirdPerson
     className: ThirdPersonUserControl
+  - hash:
+      serializedVersion: 2
+      Hash: b79cc055d056555f42c5f7bce7cd1456
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerButton
   - hash:
       serializedVersion: 2
       Hash: a4d879eed97e8d86fd752672fc026fa2
@@ -787,6 +834,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Water
     className: Displace
+  - hash:
+      serializedVersion: 2
+      Hash: 6177a2f89b36d53e7c1656c459c26d1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Billboard
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -919,12 +972,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
-  - hash:
-      serializedVersion: 2
-      Hash: 2ac60b8c74c9938127f2cb09cd3acd9f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ARTapToPlaceObject
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1215,6 +1262,12 @@ ScriptsOnlyBuild:
     className: FollowTarget
   - hash:
       serializedVersion: 2
+      Hash: b79cc055d056555f42c5f7bce7cd1456
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShipButton
+  - hash:
+      serializedVersion: 2
       Hash: de8c2a257a183731115d08b34b7bd746
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -1462,4 +1515,4 @@ ScriptsOnlyBuild:
   platform: 9
   scenePathNames:
   - Assets/arthree.unity
-  playerPath: /Users/maggie/Desktop/archaracter10
+  playerPath: /Users/maggie/Desktop/arbutton3

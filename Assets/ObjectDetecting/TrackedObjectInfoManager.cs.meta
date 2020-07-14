@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 7c8f8518f720048198ffc693f0e8fc12
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - m_WorldSpaceCanvasCamera: {fileID: 2436077647843048260, guid: 5fd4cece54c02479d868989a4abcfd14,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
