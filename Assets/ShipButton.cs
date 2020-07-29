@@ -20,7 +20,10 @@ public class ShipButton : MonoBehaviour
 		//Interaction.SetActive(false);
 		inter.characterOn = false;
 		GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        mobile.transform.GetChild(2).gameObject.SetActive(true);
-		mobile.transform.GetChild(1).gameObject.SetActive(false);
+        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        MainMenu.transform.Find("DriveBoat").gameObject.SetActive(false);
+		MainMenu.transform.Find("ReleaseBoat").gameObject.SetActive(true);
+        //mobile.transform.GetChild(2).gameObject.SetActive(true);
+		//mobile.transform.GetChild(1).gameObject.SetActive(false);
 	}
 }

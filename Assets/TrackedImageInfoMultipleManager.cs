@@ -14,14 +14,18 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
     //[SerializeField]
     //private Button dismissButton;
 
-    //[SerializeField]
-    //private Text imageTrackedText;
+    [SerializeField]
+    private Text imageTrackedText;
 
     [SerializeField]
     private GameObject[] arObjectsToPlace;
 
     //[SerializeField]
-    //private Vector3 scaleFactor = new Vector3(0.1f,0.1f,0.1f);
+    private Vector3 taxiposition = new Vector3(0,0,0);
+
+    private float minBridge = 100;
+    private float maxBridge = 0;
+    private float count = 1000;
 
     private ARTrackedImageManager m_TrackedImageManager;
 
@@ -36,9 +40,29 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
         foreach(GameObject arObject in arObjectsToPlace)
         {
             GameObject newARObject = Instantiate(arObject, Vector3.zero, Quaternion.identity);
-            //GameObject newARObject = Instantiate(arObject, Vector3.zero, this.transform.rotation);
-            newARObject.transform.Rotate (new Vector3(0,90,0));
             newARObject.name = arObject.name;
+            switch (newARObject.name){
+                case "GhostBook":
+                newARObject.transform.Rotate (new Vector3(0,180,0));
+                break;
+
+                case "LondonOly":
+                newARObject.transform.Rotate (new Vector3(90,180,0));
+                break;
+
+                case "side2":
+                newARObject.transform.Rotate (new Vector3(0,90,0));
+                break;
+
+                default:
+                break;
+            }
+      
+            
+            //GameObject newARObject = Instantiate(arObject, Vector3.zero, this.transform.rotation);
+            
+            //newARObject.transform.Rotate (new Vector3(90,180,0));
+            
             arObjects.Add(arObject.name, newARObject);
             arObject.SetActive(false);
         }
@@ -77,7 +101,7 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
     private void UpdateARImage(ARTrackedImage trackedImage)
     {
         // Display the name of the tracked image in the canvas
-        //imageTrackedText.text = trackedImage.referenceImage.name;
+        //imageTrackedText.text = trackedImage.transform.position.ToString();
 
         // Assign and Place Game Object
         //AssignGameObject(trackedImage.referenceImage.name, trackedImage.transform.position);
@@ -87,17 +111,77 @@ public class TrackedImageInfoMultipleManager : MonoBehaviour
         string name = trackedImage.referenceImage.name;
         Vector3 position = trackedImage.transform.position;
 
-        GameObject prefab = arObjects[name];
-        prefab.transform.position = position;
-        prefab.SetActive(true);
+        // if(name == "side2"){
+        //     if(lastPosition ==  Vector3.zero){
+        //         lastPosition = position;
+        //     }else{
+        //         if(lastPosition.y > (position.y +0.05)){
+        //             imageTrackedText.text = lastPosition.ToString() + "close" + position.ToString();
+        //         }else{
+        //             imageTrackedText.text = lastPosition.ToString() + "open" + position.ToString();
+        //         }
+        //     }
+        //     lastPosition = position;
+        // }
 
-        foreach(GameObject go in arObjects.Values)
-        {
-            if(go.name != name)
-            {
-                go.SetActive(false);
-            }
+        count  = count - 1; 
+        if(count == 0){
+            maxBridge = 0;
+            minBridge = 100;
+            count = 1000;
         }
+
+        if(name == "LondonOly"){
+            position.z = position.z + 0.1f;
+        }
+
+        if(name == "side2"){
+            float dist = Vector3.Distance(position, taxiposition);
+
+            if(minBridge == null){
+                minBridge = dist;
+            }
+
+            if(maxBridge == null){
+                maxBridge = dist;
+            }
+
+            if (dist < minBridge){
+                minBridge = dist;
+            }
+
+            if (dist > maxBridge){
+                maxBridge = dist;
+            }
+
+            if(Mathf.Abs(dist - minBridge) > Mathf.Abs(dist - maxBridge)){
+                imageTrackedText.text = "open";
+                GameObject prefab = arObjects[name];
+                prefab.transform.position = position;
+                prefab.SetActive(false);
+            }else{
+                imageTrackedText.text = "close";
+                GameObject prefab = arObjects[name];
+                prefab.transform.position = position;
+                prefab.SetActive(true);
+            }
+            
+        }else{
+            GameObject prefab = arObjects[name];
+            prefab.transform.position = position;
+            prefab.SetActive(true);
+
+            foreach(GameObject go in arObjects.Values)
+            {
+                if(go.name != name)
+                {
+                go.SetActive(false);
+                }
+            }
+
+        }
+
+ 
 
     }
 

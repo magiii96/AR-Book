@@ -51,6 +51,9 @@ extern "C" void RegisterStaticallyLinkedModulesGranular()
 	void RegisterModule_TextRendering();
 	RegisterModule_TextRendering();
 
+	void RegisterModule_TextCore();
+	RegisterModule_TextCore();
+
 	void RegisterModule_TLS();
 	RegisterModule_TLS();
 
@@ -197,7 +200,7 @@ class TrailRenderer;
 class VFXRenderer; 
 class Rigidbody; template <> void RegisterUnityClass<Rigidbody>(const char*);
 class Rigidbody2D; template <> void RegisterUnityClass<Rigidbody2D>(const char*);
-namespace TextRenderingPrivate { class TextMesh; } 
+namespace TextRenderingPrivate { class TextMesh; } template <> void RegisterUnityClass<TextRenderingPrivate::TextMesh>(const char*);
 class Transform; template <> void RegisterUnityClass<Transform>(const char*);
 namespace UI { class RectTransform; } template <> void RegisterUnityClass<UI::RectTransform>(const char*);
 class Tree; 
@@ -309,7 +312,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 93 non stripped classes
+	//Total: 94 non stripped classes
 	//0. NavMeshAgent
 	RegisterUnityClass<NavMeshAgent>("AI");
 	//1. NavMeshProjectSettings
@@ -484,17 +487,19 @@ RegisterBuiltinTypes();
 	RegisterUnityClass<Rigidbody2D>("Physics2D");
 	//86. TextRendering::Font
 	RegisterUnityClass<TextRendering::Font>("TextRendering");
-	//87. UI::Canvas
+	//87. TextRenderingPrivate::TextMesh
+	RegisterUnityClass<TextRenderingPrivate::TextMesh>("TextRendering");
+	//88. UI::Canvas
 	RegisterUnityClass<UI::Canvas>("UI");
-	//88. UI::CanvasGroup
+	//89. UI::CanvasGroup
 	RegisterUnityClass<UI::CanvasGroup>("UI");
-	//89. UI::CanvasRenderer
+	//90. UI::CanvasRenderer
 	RegisterUnityClass<UI::CanvasRenderer>("UI");
-	//90. WheelCollider
+	//91. WheelCollider
 	RegisterUnityClass<WheelCollider>("Vehicles");
-	//91. VideoClip
+	//92. VideoClip
 	RegisterUnityClass<VideoClip>("Video");
-	//92. VideoPlayer
+	//93. VideoPlayer
 	RegisterUnityClass<VideoPlayer>("Video");
 
 }

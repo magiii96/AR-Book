@@ -21,6 +21,8 @@ public class ReleaseButton : MonoBehaviour
 		inter.characterOn = true;
 		inter.release = true;
 		GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        mobile.transform.GetChild(2).gameObject.SetActive(false);
+		GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+		MainMenu.transform.Find("ReleaseBoat").gameObject.SetActive(false);
+        //mobile.transform.GetChild(2).gameObject.SetActive(false);
 	}
 }

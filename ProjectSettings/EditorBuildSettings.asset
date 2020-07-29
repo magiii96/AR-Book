@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/artwo.unity
     guid: e21a72b7fbc4141a0bda2b8e35b6664c
-  - enabled: 1
+  - enabled: 0
     path: Assets/arthree.unity
     guid: 9c619aced85454f8eaf6974b35cd5c09
+  - enabled: 1
+    path: Assets/arfour.unity
+    guid: da9055cb649c3446b837261f9ef8956e
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b9e3590e52cf047948f87e59c6487f3c,
       type: 2}

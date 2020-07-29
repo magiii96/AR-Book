@@ -2,66 +2,155 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
-//using UnityEngine.Experimental.XR
-
 using UnityEngine.XR.ARSubsystems;
+using UnityEngine.UI;
+//using UnityEngine.Experimental.XR;
+
 using System;
+
+//[RequireComponent(typeof(ARRaycastManager))]
+//[RequireComponent(typeof(ARAnchorManager))]
+//[RequireComponent(typeof(ARPlaneManager))]
 
 public class TapToPlaceObject : MonoBehaviour
 {
+
+    [SerializeField]
+    private Button startanchor;
+
+    [SerializeField]
+    private Button CreateCharacter;
+
     public GameObject placementIndicator;
     public GameObject character;
 
-    //private ARSessionOrigin arOrigin;
+    private ARSessionOrigin arOrigin;
     private Pose PlacementPose;
-    private ARRaycastManager aRRaycastManager;
+    private ARRaycastManager arRaycastManager;
+    private ARAnchorManager arAnchorManager;
+    private ARPlaneManager arPlaneManager;
+
+    private List<ARAnchor> Anchors = new List<ARAnchor>();
+    private static List<ARRaycastHit> hits = new List<ARRaycastHit>(); 
+    
     private bool placementPoseIsValid = false;
     private bool oneobject = false;
     public bool characterOn = true;
     public bool release = false;
     public bool reset = false;
+    private bool startmain = false;
+    private bool canchor = false;
+    private bool oneanchor = false;
+    private Vector3 anchorPosition;
+
+
 
     void Start()
     {
-        //arOrigin = FindObjectOfType<ARSessionOrigin>();
-        aRRaycastManager = FindObjectOfType<ARRaycastManager>();
+        arOrigin = FindObjectOfType<ARSessionOrigin>();
+        arRaycastManager = FindObjectOfType<ARRaycastManager>();
+        arPlaneManager = FindObjectOfType<ARPlaneManager>();
+        arAnchorManager = FindObjectOfType<ARAnchorManager>();
+
         GameObject mobile = GameObject.Find("MobileSingleStickControl");
         //GameObject ghostbook = GameObject.Find("GhostBook");
         //GameObject castle = GameObject.Find("Castle");
         //GameObject ghostbook = GameObject.Find("GhostBook");
-        mobile.transform.GetChild(1).gameObject.SetActive(false);
-        mobile.transform.GetChild(2).gameObject.SetActive(false);
+        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        MainMenu.SetActive(false);
+        // ReleaseBoat = MainMenu.transform.Find("ReleaseBoat").gameObject;
+        // ReleaseBoat.SetActive(false);
+        // DriveBoat = MainMenu.transform.Find("DriveBoat").gameObject;
+        // DriveBoat.SetActive(false);
+        startanchor.onClick.AddListener(CreateAnchor);
+        CreateCharacter.onClick.AddListener(CreateCha);
+        //mobile.transform.GetChild(1).gameObject.SetActive(false);
+        //mobile.transform.GetChild(2).gameObject.SetActive(false);
     }
 
     void Update()
     {
-        UpdatePlacementPose();
-        UpdatePlacementIndicator();
-        if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            {   if(!oneobject){
+        if(canchor){
+            if(Input.touchCount == 0){
+                return;
+            }
+            Touch touch = Input.GetTouch(0);
+            if((!oneanchor)&& arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon)){  
+                //PlaceAnchor();
+                arRaycastManager.Raycast(touch.position, hits, TrackableType.PlaneWithinPolygon);
+                Pose hitPose = hits[0].pose;
+                anchorPosition = hitPose.position;
+                ARAnchor Anchor = arAnchorManager.AddAnchor(hitPose);
+                if(Anchor == null){
+                    string errorEntry = "There was an error creating a reference point\n";
+                    Debug.Log(errorEntry);
+                }else{
+                    oneanchor = true;
+                    Anchors.Add(Anchor);
+                    setMainMenu();
+                    canchor = false;
+                }
+            }
+
+        }
+         
+
+
+        if(startmain){
+            UpdatePlacementPose();
+            UpdatePlacementIndicator();
+            if (placementPoseIsValid && Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began){
+                if(!oneobject){
                     PlaceObject();
                     oneobject = true;
                 }
             
             }
 
-        if(!characterOn){
-            DeActiveCha();
-        }else{
-            if(release){
-                ActiveCha();
+            if(!characterOn){
+                DeActiveCha();
+            }else{
+                if(release){
+                    ActiveCha();
+                }
+             }
+        
+            if(reset){
+                ResetAll();
             }
-        }
         
-        if(reset){
-            ResetAll();
+            if(oneobject){
+                placementIndicator.SetActive(false);
+            }else{
+                placementIndicator.SetActive(true);
+            }
+
         }
-        
-        if(oneobject){
-            placementIndicator.SetActive(false);
-        }else{
-            placementIndicator.SetActive(true);
-        }
+            
+      
+    }
+
+    private void setMainMenu(){
+        GameObject mobile = GameObject.Find("MobileSingleStickControl");
+        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        MainMenu.SetActive(true);
+        GameObject ReleaseBoat = MainMenu.transform.Find("ReleaseBoat").gameObject;
+        ReleaseBoat.SetActive(false);
+        GameObject DriveBoat = MainMenu.transform.Find("DriveBoat").gameObject;
+        DriveBoat.SetActive(false);
+        GameObject StartMenu = mobile.transform.Find("StartMenu").gameObject;
+        StartMenu.SetActive(false);
+    }
+
+    private void CreateAnchor(){
+        canchor = true;
+    }
+
+    private void CreateCha(){
+        startmain = true;
+        GameObject mobile = GameObject.Find("MobileSingleStickControl");
+        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        MainMenu.transform.Find("CreateCharacter").gameObject.SetActive(false);
     }
 
     private void ActiveCha(){
@@ -95,8 +184,12 @@ public class TapToPlaceObject : MonoBehaviour
             shipObject.GetComponent<Rigidbody>().isKinematic = true;
         }
         GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        mobile.transform.GetChild(1).gameObject.SetActive(false);
-        mobile.transform.GetChild(2).gameObject.SetActive(false);
+        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        MainMenu.transform.Find("ReleaseBoat").gameObject.SetActive(false);
+        MainMenu.transform.Find("DriveBoat").gameObject.SetActive(false);
+
+        //mobile.transform.GetChild(1).gameObject.SetActive(false);
+        //mobile.transform.GetChild(2).gameObject.SetActive(false);
         oneobject = false;
         characterOn = true;
         release = false;
@@ -123,8 +216,15 @@ public class TapToPlaceObject : MonoBehaviour
 
     private void PlaceObject()
     {
-        GameObject chaClone = (GameObject) Instantiate(character, PlacementPose.position, PlacementPose.rotation);
+        Vector3 chaposition =new Vector3(PlacementPose.position.x,PlacementPose.position.y,anchorPosition.z);
+        GameObject chaClone = (GameObject) Instantiate(character, chaposition, PlacementPose.rotation);
         chaClone.name = "character";
+    }
+
+    private void PlaceAnchor(){
+
+        
+
     }
 
     private void UpdatePlacementIndicator()
@@ -144,9 +244,12 @@ public class TapToPlaceObject : MonoBehaviour
 	{
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
-        aRRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
+        arRaycastManager.Raycast(screenCenter, hits, TrackableType.Planes);
 
-        placementPoseIsValid = hits.Count > 0;
+        if((hits.Count > 0) && startmain){
+            placementPoseIsValid = true;
+        }
+        //placementPoseIsValid = hits.Count > 0;
         if (placementPoseIsValid)
 		{
             PlacementPose = hits[0].pose;

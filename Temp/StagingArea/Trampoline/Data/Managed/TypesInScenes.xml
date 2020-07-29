@@ -58,6 +58,7 @@
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="Billboard" preserve="nothing"/>
 		<type fullname="PlayerButton" preserve="nothing"/>
+		<type fullname="ReferencePointManager" preserve="nothing"/>
 		<type fullname="ReleaseButton" preserve="nothing"/>
 		<type fullname="ShipButton" preserve="nothing"/>
 		<type fullname="ShipController" preserve="nothing"/>
@@ -67,7 +68,15 @@
 		<type fullname="TrackedObjectInfoManager" preserve="nothing"/>
 		<type fullname="manController" preserve="nothing"/>
 	</assembly>
+	<assembly fullname="Unity.TextMeshPro">
+		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
+		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
+		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
+	</assembly>
 	<assembly fullname="Unity.XR.ARFoundation">
+		<type fullname="UnityEngine.XR.ARFoundation.ARAnchorManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraBackground" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARInputManager" preserve="nothing"/>
