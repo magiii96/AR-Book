@@ -85,3 +85,23 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Taxi
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4728228041468750633
+      m_GuidHigh: 8980477302145992583
+    m_SerializedTextureGuid:
+      m_GuidLow: 8359648909995880844
+      m_GuidHigh: 17418314784096474010
+    m_Size: {x: 0.1, y: 0.060355987}
+    m_SpecifySize: 1
+    m_Name: FootGuard
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5730443755285355624
+      m_GuidHigh: 18062916484007990657
+    m_SerializedTextureGuid:
+      m_GuidLow: 14128873124096932130
+      m_GuidHigh: 8907867834549126347
+    m_Size: {x: 0.19, y: 0.1896955}
+    m_SpecifySize: 1
+    m_Name: redbook
+    m_Texture: {fileID: 0}

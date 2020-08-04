@@ -27889,7 +27889,7 @@ IL_0022:
 		// if (!texture.isReadable)
 		Texture2D_tBBF96AC337723E2EF156DF17E09D4379FD05DE1C * L_5 = ___texture1;
 		NullCheck(L_5);
-		bool L_6 = VirtFuncInvoker0< bool >::Invoke(8 /* System.Boolean UnityEngine.Texture::get_isReadable() */, L_5);
+		bool L_6 = VirtFuncInvoker0< bool >::Invoke(10 /* System.Boolean UnityEngine.Texture::get_isReadable() */, L_5);
 		if (L_6)
 		{
 			goto IL_0035;

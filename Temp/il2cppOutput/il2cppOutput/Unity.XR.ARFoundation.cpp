@@ -925,11 +925,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mD172D8F38F264D579B6C914A3A26D
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mD40E15E48D8715A0C6EE7BD605D719A050BD17F7_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1__ctor_mE6FFB219480582369513E4A1F005A2240DAFB781_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m01A4CD0CC8559CBF78718B53E43C81C07CD3CB44_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m3803071742D5A878B543FD23693DE50A1C9AEE3C_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m3D9BE6624F6627115C60F14B9D0EB2A05AAF86C1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m4C5D000292EEF28E75ACECA42D351B781698141B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m4EB04B009BA07E6F8609DCCB443A54301BCA7DFF_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_m74B70E43FC8ECC97A5AFA52D53ECE859B753B184_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mAC777EF7FB3D851A4E0A35DCE1054F5FC7AB0EBC_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* List_1_get_Count_mDA878493C824BC20E9C43985E6B4B8A6BEC9CE5A_RuntimeMethod_var;
@@ -15106,7 +15106,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Nullable_1_GetHashCode_mF5BD26764BBB7
 // System.Boolean System.Nullable`1<System.Int64>::get_HasValue()
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m93455125DECBC2A055273524A11F1D2A51C707BE_gshared_inline (Nullable_1_t9736900C35D60187C67DF38254F77E942266080F * __this, const RuntimeMethod* method);
 // System.Int32 System.Collections.Generic.List`1<System.Int32>::get_Count()
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_gshared_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method);
+IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_gshared_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method);
 // !0 System.Nullable`1<System.Int64>::GetValueOrDefault()
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int64_t Nullable_1_GetValueOrDefault_m384672A6E116BB3B05332B9DD9B199E54045F0A0_gshared_inline (Nullable_1_t9736900C35D60187C67DF38254F77E942266080F * __this, const RuntimeMethod* method);
 // !0 System.Nullable`1<UnityEngine.Matrix4x4>::GetValueOrDefault()
@@ -15855,9 +15855,9 @@ inline bool Nullable_1_get_HasValue_m93455125DECBC2A055273524A11F1D2A51C707BE_in
 	return ((  bool (*) (Nullable_1_t9736900C35D60187C67DF38254F77E942266080F *, const RuntimeMethod*))Nullable_1_get_HasValue_m93455125DECBC2A055273524A11F1D2A51C707BE_gshared_inline)(__this, method);
 }
 // System.Int32 System.Collections.Generic.List`1<System.Int32>::get_Count()
-inline int32_t List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method)
+inline int32_t List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 *, const RuntimeMethod*))List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_gshared_inline)(__this, method);
+	return ((  int32_t (*) (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 *, const RuntimeMethod*))List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_gshared_inline)(__this, method);
 }
 // System.String UnityEngine.XR.ARFoundation.ARCameraFrameEventArgs::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* ARCameraFrameEventArgs_ToString_mDF4038AD013A1FFAF03364EC3D9C67BC68CBF023 (ARCameraFrameEventArgs_t25F661E15E542829DB3CAAD158FED01CC8874672 * __this, const RuntimeMethod* method);
@@ -20768,7 +20768,7 @@ IL_00b7:
 	{
 		List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * L_32 = ARCameraFrameEventArgs_get_propertyNameIds_m35A321FDF6F05EB80E68C74492CAAFA2438F72A7_inline((ARCameraFrameEventArgs_t25F661E15E542829DB3CAAD158FED01CC8874672 *)__this, /*hidden argument*/NULL);
 		NullCheck(L_32);
-		int32_t L_33 = List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_inline(L_32, /*hidden argument*/List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_RuntimeMethod_var);
+		int32_t L_33 = List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_inline(L_32, /*hidden argument*/List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_RuntimeMethod_var);
 		G_B8_0 = L_33;
 		G_B8_1 = G_B6_0;
 		G_B8_2 = G_B6_1;
@@ -37912,7 +37912,7 @@ IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR bool Nullable_1_get_HasValue_m93455125
 		return L_0;
 	}
 }
-IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m52793036D5E41E8E25DCC5C033380C44D7596903_gshared_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method)
+IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m0AEC7165BCDA1870BB35D5B1BE47F1F0EAE89C76_gshared_inline (List_1_tE1526161A558A17A39A8B69D8EEF3801393B6226 * __this, const RuntimeMethod* method)
 {
 	{
 		int32_t L_0 = (int32_t)__this->get__size_2();

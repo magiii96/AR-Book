@@ -7800,6 +7800,22 @@ IL2CPP_EXTERN_C void GUIContent_t2A00F8961C69C0A382168840CFB2111FB00B5EA0_marsha
 IL2CPP_EXTERN_C void GUIContent_t2A00F8961C69C0A382168840CFB2111FB00B5EA0_marshal_com_cleanup(GUIContent_t2A00F8961C69C0A382168840CFB2111FB00B5EA0_marshaled_com& marshaled)
 {
 }
+// System.String UnityEngine.GUIContent::get_text()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* GUIContent_get_text_mAAFFFB0278FCB4F7A7661BE595BA42CD093E38C5 (GUIContent_t2A00F8961C69C0A382168840CFB2111FB00B5EA0 * __this, const RuntimeMethod* method)
+{
+	String_t* V_0 = NULL;
+	{
+		String_t* L_0 = __this->get_m_Text_0();
+		V_0 = L_0;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		String_t* L_1 = V_0;
+		return L_1;
+	}
+}
 // System.Void UnityEngine.GUIContent::set_text(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIContent_set_text_m866E0C5690119816D87D83124C81BDC0A0ED4316 (GUIContent_t2A00F8961C69C0A382168840CFB2111FB00B5EA0 * __this, String_t* ___value0, const RuntimeMethod* method)
 {
@@ -13400,7 +13416,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR GUILayoutGroup_tCC791055AD03074C1257B699304E4
 		Type_t * L_1 = Type_GetTypeFromHandle_m9DC58ADF0512987012A8A016FB64B068F3B1AFF6(L_0, /*hidden argument*/NULL);
 		Type_t * L_2 = ___LayoutType0;
 		NullCheck(L_1);
-		bool L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
+		bool L_3 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_1, L_2);
 		V_0 = (bool)((((int32_t)L_3) == ((int32_t)0))? 1 : 0);
 		bool L_4 = V_0;
 		if (!L_4)

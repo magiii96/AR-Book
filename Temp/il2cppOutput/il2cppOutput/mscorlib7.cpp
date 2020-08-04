@@ -700,6 +700,7 @@ IL2CPP_EXTERN_C RuntimeClass* Int64_t7A386C2FF7B0280A0F516992401DDFCF0FF7B436_il
 IL2CPP_EXTERN_C RuntimeClass* IntPtr_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidCastException_t91DF9E7D7FCCDA6C562CB4A9A18903E016680FDA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* InvalidOperationException_t0530E734D823F78310CAFAFA424CA5164D93A1F1_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_t05CC3C859AB5E6024394EF9A42E3E696628CA02D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* List_1_tA81E98B62587323D3D4019332A93BDF9F9E1163D_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* LocalDataStoreElementU5BU5D_t497D47CE89AF78D3EF9A7AC332F7AD017A3CD3B0_il2cpp_TypeInfo_var;
@@ -731,6 +732,7 @@ IL2CPP_EXTERN_C RuntimeClass* ParameterInfo_t37AB8D79D44E14C48CDA9004CB696E240C3
 IL2CPP_EXTERN_C RuntimeClass* PathTooLongException_t8DFBC40E5D45388A65B3327CF0D1F677C0F923AA_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Path_t0B99A4B924A6FDF08814FFA8DD4CD121ED1A0752_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ReadWriteTask_tFA17EEE8BC5C4C83EAEFCC3662A30DE351ABAA80_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* RuntimeObject_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* RuntimeType_t40F13BCEAD97478C72C4B40BFDC2A220161CDB8F_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SecurityException_tBB116BA16A419AB19A4F7DEEF43A3FC2A638E8D5_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* SemaphoreSlim_t2E2888D1C0C8FAB80823C76F1602E4434B8FA048_il2cpp_TypeInfo_var;
@@ -1096,6 +1098,7 @@ IL2CPP_EXTERN_C const uint32_t InvalidTimeZoneException__ctor_m8FFF6B288E617CAA9
 IL2CPP_EXTERN_C const uint32_t KnownTerminals_get_ansi_m2ECEBC902EBB68D9A849ED1B76F8008918BEBB4D_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t KnownTerminals_get_linux_m9A34213D8DB968ED3864B4E321BA4B71DB7E8B95_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t KnownTerminals_get_xterm_mA890BFD590F820BBB23B219E1AD1C8BCD3DFA345_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t LazyHelpers__cctor_m53A0409653132D750F0B94E8EBECE05633088869_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t LocalDataStoreMgr_AllocateDataSlot_m879EF0F47F1E07F1B0F905EB2F964E875CF7E036_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t LocalDataStoreMgr_AllocateNamedDataSlot_mAD7738795BC4FF13631C2993592F6256FC309FF2_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t LocalDataStoreMgr_CreateLocalDataStore_m5455FCABE10BCFC739E52A0EF6404FF033E93417_MetadataUsageId;
@@ -1907,6 +1910,8 @@ struct  ReadOnlyCollection_1_tDD4D93FFE40A14E74D1B366764AABCE0121ED99F  : public
 public:
 	// System.Collections.Generic.IList`1<T> System.Collections.ObjectModel.ReadOnlyCollection`1::list
 	RuntimeObject* ___list_0;
+	// System.Object System.Collections.ObjectModel.ReadOnlyCollection`1::_syncRoot
+	RuntimeObject * ____syncRoot_1;
 
 public:
 	inline static int32_t get_offset_of_list_0() { return static_cast<int32_t>(offsetof(ReadOnlyCollection_1_tDD4D93FFE40A14E74D1B366764AABCE0121ED99F, ___list_0)); }
@@ -1916,6 +1921,15 @@ public:
 	{
 		___list_0 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___list_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__syncRoot_1() { return static_cast<int32_t>(offsetof(ReadOnlyCollection_1_tDD4D93FFE40A14E74D1B366764AABCE0121ED99F, ____syncRoot_1)); }
+	inline RuntimeObject * get__syncRoot_1() const { return ____syncRoot_1; }
+	inline RuntimeObject ** get_address_of__syncRoot_1() { return &____syncRoot_1; }
+	inline void set__syncRoot_1(RuntimeObject * value)
+	{
+		____syncRoot_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____syncRoot_1), (void*)value);
 	}
 };
 
@@ -2920,6 +2934,32 @@ struct  KnownTerminals_tC33732356694467E5C41300FDB5A86143590F1AE  : public Runti
 public:
 
 public:
+};
+
+
+// System.LazyHelpers
+struct  LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+struct LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE_StaticFields
+{
+public:
+	// System.Object System.LazyHelpers::PUBLICATION_ONLY_SENTINEL
+	RuntimeObject * ___PUBLICATION_ONLY_SENTINEL_0;
+
+public:
+	inline static int32_t get_offset_of_PUBLICATION_ONLY_SENTINEL_0() { return static_cast<int32_t>(offsetof(LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE_StaticFields, ___PUBLICATION_ONLY_SENTINEL_0)); }
+	inline RuntimeObject * get_PUBLICATION_ONLY_SENTINEL_0() const { return ___PUBLICATION_ONLY_SENTINEL_0; }
+	inline RuntimeObject ** get_address_of_PUBLICATION_ONLY_SENTINEL_0() { return &___PUBLICATION_ONLY_SENTINEL_0; }
+	inline void set_PUBLICATION_ONLY_SENTINEL_0(RuntimeObject * value)
+	{
+		___PUBLICATION_ONLY_SENTINEL_0 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&___PUBLICATION_ONLY_SENTINEL_0), (void*)value);
+	}
 };
 
 
@@ -27921,6 +27961,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tD06FDBE8142446525DF1C40351D523A22
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.LazyHelpers::.cctor()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LazyHelpers__cctor_m53A0409653132D750F0B94E8EBECE05633088869 (const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (LazyHelpers__cctor_m53A0409653132D750F0B94E8EBECE05633088869_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RuntimeObject * L_0 = (RuntimeObject *)il2cpp_codegen_object_new(RuntimeObject_il2cpp_TypeInfo_var);
+		Object__ctor_m925ECA5E85CA100E3FB86A4F9E15C120E9A184C0(L_0, /*hidden argument*/NULL);
+		((LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE_StaticFields*)il2cpp_codegen_static_fields_for(LazyHelpers_tA0B5300016720440F338B5C80CC6FD4D8E15D7EE_il2cpp_TypeInfo_var))->set_PUBLICATION_ONLY_SENTINEL_0(L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void System.LocalDataStore::.ctor(System.LocalDataStoreMgr,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LocalDataStore__ctor_m2FDC5D7F0A6331A045F5C5E90C1EE386AF755910 (LocalDataStore_t6C2EF76DEFF7A28E1786284FA24CE62EAFC83BEE * __this, LocalDataStoreMgr_t1964DDB9F2BE154BE3159A7507D0D0CCBF8FDCA9 * ___mgr0, int32_t ___InitialCapacity1, const RuntimeMethod* method)
 {
@@ -29621,6 +29685,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Log_mD51F54D254E1380E2317F19403E6
 {
 	return log(___d0);
 }
+// System.Double System.Math::Exp(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Exp_m278C8D07D8F3A6DEAA2632DB90C24FF758BCC661 (double ___d0)
+{
+	return exp(___d0);
+}
 // System.Double System.Math::Pow(System.Double,System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Pow_m9CD842663B1A2FA4C66EEFFC6F0D705B40BE46F1 (double ___x0, double ___y1, const RuntimeMethod* method)
 {
@@ -31301,7 +31370,7 @@ IL_0068:
 		NullCheck(L_19);
 		Type_t * L_20 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_19, /*hidden argument*/NULL);
 		NullCheck(L_15);
-		bool L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_20);
+		bool L_21 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_15, L_20);
 		if (!L_21)
 		{
 			goto IL_008d;
@@ -31683,7 +31752,7 @@ IL_0059:
 		NullCheck(L_23);
 		Type_t * L_24 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_23, /*hidden argument*/NULL);
 		NullCheck(L_20);
-		bool L_25 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_20, L_24);
+		bool L_25 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_20, L_24);
 		if (!L_25)
 		{
 			goto IL_0087;
@@ -31934,7 +32003,7 @@ IL_0168:
 		Type_t * L_88 = ___attributeType1;
 		Type_t * L_89 = V_12;
 		NullCheck(L_88);
-		bool L_90 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_88, L_89);
+		bool L_90 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_88, L_89);
 		if (!L_90)
 		{
 			goto IL_018c;
@@ -32073,7 +32142,7 @@ IL_020c:
 		Type_t * L_125 = ___attributeType1;
 		Type_t * L_126 = V_15;
 		NullCheck(L_125);
-		bool L_127 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_125, L_126);
+		bool L_127 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_125, L_126);
 		if (!L_127)
 		{
 			goto IL_0290;
@@ -32474,7 +32543,7 @@ IL_0041:
 		NullCheck(L_20);
 		Type_t * L_21 = Object_GetType_m2E0B62414ECCAA3094B703790CE88CBB2F83EA60(L_20, /*hidden argument*/NULL);
 		NullCheck(L_16);
-		bool L_22 = VirtFuncInvoker1< bool, Type_t * >::Invoke(108 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_16, L_21);
+		bool L_22 = VirtFuncInvoker1< bool, Type_t * >::Invoke(109 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_16, L_21);
 		if (!L_22)
 		{
 			goto IL_0053;

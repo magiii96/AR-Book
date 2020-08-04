@@ -1831,6 +1831,8 @@ struct  ReadOnlyCollection_1_t5DE493537EE0E554797BF0DA823DCBF1903CECC1  : public
 public:
 	// System.Collections.Generic.IList`1<T> System.Collections.ObjectModel.ReadOnlyCollection`1::list
 	RuntimeObject* ___list_0;
+	// System.Object System.Collections.ObjectModel.ReadOnlyCollection`1::_syncRoot
+	RuntimeObject * ____syncRoot_1;
 
 public:
 	inline static int32_t get_offset_of_list_0() { return static_cast<int32_t>(offsetof(ReadOnlyCollection_1_t5DE493537EE0E554797BF0DA823DCBF1903CECC1, ___list_0)); }
@@ -1840,6 +1842,15 @@ public:
 	{
 		___list_0 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___list_0), (void*)value);
+	}
+
+	inline static int32_t get_offset_of__syncRoot_1() { return static_cast<int32_t>(offsetof(ReadOnlyCollection_1_t5DE493537EE0E554797BF0DA823DCBF1903CECC1, ____syncRoot_1)); }
+	inline RuntimeObject * get__syncRoot_1() const { return ____syncRoot_1; }
+	inline RuntimeObject ** get_address_of__syncRoot_1() { return &____syncRoot_1; }
+	inline void set__syncRoot_1(RuntimeObject * value)
+	{
+		____syncRoot_1 = value;
+		Il2CppCodeGenWriteBarrier((void**)(&____syncRoot_1), (void*)value);
 	}
 };
 
@@ -5856,6 +5867,24 @@ struct ExecutionContextSwitcher_t739C861A327D724A4E59DE865463B32097395159_marsha
 	Il2CppIUnknown* ___hecsw_2;
 	Thread_tF60E0A146CD3B5480CB65FF9B6016E84C5460CC7 * ___thread_3;
 };
+
+// System.Threading.LazyThreadSafetyMode
+struct  LazyThreadSafetyMode_t27F7B5E5CE01EF053452A4EEBBB9D1EE220B145E 
+{
+public:
+	// System.Int32 System.Threading.LazyThreadSafetyMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LazyThreadSafetyMode_t27F7B5E5CE01EF053452A4EEBBB9D1EE220B145E, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
 
 // System.Threading.ManualResetEventSlim
 struct  ManualResetEventSlim_t085E880B24016C42F7DE42113674D0A41B4FB445  : public RuntimeObject
@@ -22061,6 +22090,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InternalThread__ctor_m39E0F7CE7349918AB5
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

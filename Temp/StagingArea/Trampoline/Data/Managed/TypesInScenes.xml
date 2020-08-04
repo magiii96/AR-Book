@@ -2,6 +2,7 @@
 	<assembly fullname="UnityEngine">
 		<type fullname="UnityEngine.Object" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.MonoBehaviour" preserve="nothing"/>
@@ -27,6 +28,8 @@
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.RectTransform" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffect" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VFXRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Video.VideoPlayer" preserve="nothing"/>
 		<type fullname="UnityEngine.Animator" preserve="nothing"/>
 		<type fullname="UnityEngine.RuntimeAnimatorController" preserve="nothing"/>
@@ -37,6 +40,8 @@
 		<type fullname="UnityEngine.Sprite" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Renderer" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
+		<type fullname="UnityEngine.VFX.VisualEffectObject" preserve="nothing"/>
 		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
@@ -67,6 +72,33 @@
 		<type fullname="TrackedImageInfoMultipleManager" preserve="nothing"/>
 		<type fullname="TrackedObjectInfoManager" preserve="nothing"/>
 		<type fullname="manController" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerBitField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerCanvas" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerColor" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerContainer" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerEnumField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerEnumHistory" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerFloatField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerFoldout" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerGroup" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerHBox" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIndirectFloatField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIndirectToggle" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerIntField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPanel" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerPersistentCanvas" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerToggle" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerToggleHistory" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerUIntField" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVBox" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerValue" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector2" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector3" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector4" preserve="nothing"/>
+		<type fullname="UnityEngine.Rendering.UI.UIFoldout" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
@@ -109,8 +141,16 @@
 		<type fullname="UnityEngine.EventSystems.StandaloneInputModule" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Button" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.CanvasScaler" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.ContentSizeFitter" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.GraphicRaycaster" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.Toggle" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="nothing"/>
 	</assembly>
 </linker>
