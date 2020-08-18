@@ -1056,15 +1056,6 @@ public:
 };
 
 
-// UnityEngine.AudioListener
-struct  AudioListener_tE3E1467B84A4AFD509947B44A7C8ACFB67FF2099  : public AudioBehaviour_tC612EC4E17A648A5C568621F3FBF1DBD773C71C7
-{
-public:
-
-public:
-};
-
-
 // UnityEngine.AudioSource
 struct  AudioSource_t5196F862B4E60F404613361C90D87FBDD041E93C  : public AudioBehaviour_tC612EC4E17A648A5C568621F3FBF1DBD773C71C7
 {
@@ -1718,33 +1709,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* PCMSetPositionCallback_BeginIn
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PCMSetPositionCallback_EndInvoke_mB711E23CFD370348A1680B281A3DFE04F970792C (PCMSetPositionCallback_t092ED33043C0279B5E4D343EBCBD516CEF260801 * __this, RuntimeObject* ___result0, const RuntimeMethod* method)
 {
 	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Single UnityEngine.AudioListener::get_volume()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float AudioListener_get_volume_mEC4EAD947C040A3264F3F68B29E222C62A5EAA78 (const RuntimeMethod* method)
-{
-	typedef float (*AudioListener_get_volume_mEC4EAD947C040A3264F3F68B29E222C62A5EAA78_ftn) ();
-	static AudioListener_get_volume_mEC4EAD947C040A3264F3F68B29E222C62A5EAA78_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AudioListener_get_volume_mEC4EAD947C040A3264F3F68B29E222C62A5EAA78_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioListener::get_volume()");
-	float retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.Void UnityEngine.AudioListener::set_volume(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioListener_set_volume_mFD5EDF90B857A5A28A95A1B2367B9B3BA7E90E52 (float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*AudioListener_set_volume_mFD5EDF90B857A5A28A95A1B2367B9B3BA7E90E52_ftn) (float);
-	static AudioListener_set_volume_mFD5EDF90B857A5A28A95A1B2367B9B3BA7E90E52_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (AudioListener_set_volume_mFD5EDF90B857A5A28A95A1B2367B9B3BA7E90E52_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AudioListener::set_volume(System.Single)");
-	_il2cpp_icall_func(___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

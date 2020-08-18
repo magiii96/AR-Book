@@ -24223,7 +24223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * SharedReference_Get_m41331011
 	{
 		WeakReference_t0495CC81CD6403E662B7700B802443F6F730E39D * L_2 = __this->get__ref_0();
 		NullCheck(L_2);
-		RuntimeObject * L_3 = VirtFuncInvoker0< RuntimeObject * >::Invoke(6 /* System.Object System.WeakReference::get_Target() */, L_2);
+		RuntimeObject * L_3 = VirtFuncInvoker0< RuntimeObject * >::Invoke(5 /* System.Object System.WeakReference::get_Target() */, L_2);
 		__this->set__locked_1(0);
 		return L_3;
 	}
@@ -24248,7 +24248,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SharedReference_Cache_mEFA6A88B206EAFEAD
 		WeakReference_t0495CC81CD6403E662B7700B802443F6F730E39D * L_2 = __this->get__ref_0();
 		RuntimeObject * L_3 = ___obj0;
 		NullCheck(L_2);
-		VirtActionInvoker1< RuntimeObject * >::Invoke(7 /* System.Void System.WeakReference::set_Target(System.Object) */, L_2, L_3);
+		VirtActionInvoker1< RuntimeObject * >::Invoke(6 /* System.Void System.WeakReference::set_Target(System.Object) */, L_2, L_3);
 		__this->set__locked_1(0);
 	}
 

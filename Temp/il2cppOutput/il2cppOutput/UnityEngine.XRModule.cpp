@@ -62,7 +62,7 @@ struct AsyncCallback_t3F3DA3BEDAEE81DD1D24125DF8EB30E85EE14DA4;
 // System.Char[]
 struct CharU5BU5D_t4CC6ABF0AD71BEC97E3C2F1E9C5677E46D3A75C2;
 // System.Collections.Generic.List`1<System.UInt64>
-struct List_1_t48CD17D5BA5410E17340B1CF898DAF8467E082E8;
+struct List_1_tBF0014F1896CE8E8983C235CDF2C00B1FBEE2CDC;
 // System.Collections.Generic.List`1<UnityEngine.XR.MeshInfo>
 struct List_1_t8B901F577995BDF2BDFC726428DFE35A17BB6661;
 // System.Collections.Generic.List`1<UnityEngine.XR.XRNodeState>
@@ -2845,7 +2845,7 @@ public:
 	// System.Action`1<UnityEngine.XR.XRInputSubsystem> UnityEngine.XR.XRInputSubsystem::boundaryChanged
 	Action_1_tE36D94C70DDB9BA2EFBB2876BF63E27C74A181C6 * ___boundaryChanged_3;
 	// System.Collections.Generic.List`1<System.UInt64> UnityEngine.XR.XRInputSubsystem::m_DeviceIdsCache
-	List_1_t48CD17D5BA5410E17340B1CF898DAF8467E082E8 * ___m_DeviceIdsCache_4;
+	List_1_tBF0014F1896CE8E8983C235CDF2C00B1FBEE2CDC * ___m_DeviceIdsCache_4;
 
 public:
 	inline static int32_t get_offset_of_trackingOriginUpdated_2() { return static_cast<int32_t>(offsetof(XRInputSubsystem_t9B5A5AD5B134D55762D1FA5E425126EF7F86B2B7, ___trackingOriginUpdated_2)); }
@@ -2867,9 +2867,9 @@ public:
 	}
 
 	inline static int32_t get_offset_of_m_DeviceIdsCache_4() { return static_cast<int32_t>(offsetof(XRInputSubsystem_t9B5A5AD5B134D55762D1FA5E425126EF7F86B2B7, ___m_DeviceIdsCache_4)); }
-	inline List_1_t48CD17D5BA5410E17340B1CF898DAF8467E082E8 * get_m_DeviceIdsCache_4() const { return ___m_DeviceIdsCache_4; }
-	inline List_1_t48CD17D5BA5410E17340B1CF898DAF8467E082E8 ** get_address_of_m_DeviceIdsCache_4() { return &___m_DeviceIdsCache_4; }
-	inline void set_m_DeviceIdsCache_4(List_1_t48CD17D5BA5410E17340B1CF898DAF8467E082E8 * value)
+	inline List_1_tBF0014F1896CE8E8983C235CDF2C00B1FBEE2CDC * get_m_DeviceIdsCache_4() const { return ___m_DeviceIdsCache_4; }
+	inline List_1_tBF0014F1896CE8E8983C235CDF2C00B1FBEE2CDC ** get_address_of_m_DeviceIdsCache_4() { return &___m_DeviceIdsCache_4; }
+	inline void set_m_DeviceIdsCache_4(List_1_tBF0014F1896CE8E8983C235CDF2C00B1FBEE2CDC * value)
 	{
 		___m_DeviceIdsCache_4 = value;
 		Il2CppCodeGenWriteBarrier((void**)(&___m_DeviceIdsCache_4), (void*)value);

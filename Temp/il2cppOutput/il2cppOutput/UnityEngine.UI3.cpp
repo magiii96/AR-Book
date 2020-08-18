@@ -82,7 +82,7 @@ struct AsyncCallback_t3F3DA3BEDAEE81DD1D24125DF8EB30E85EE14DA4;
 // System.Char[]
 struct CharU5BU5D_t4CC6ABF0AD71BEC97E3C2F1E9C5677E46D3A75C2;
 // System.Collections.Generic.IEnumerable`1<System.Int32>
-struct IEnumerable_1_t1AE8F03F101BA7578AF3A97EF1EBE8DB5FF31215;
+struct IEnumerable_1_tC8E2D23A5937714ABB338DF7C65563ABED65CF05;
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_t2F75FCBEC68AFE08982DA43985F9D04056E2BE73;
 // System.Collections.Generic.IEnumerable`1<UnityEngine.Color32>

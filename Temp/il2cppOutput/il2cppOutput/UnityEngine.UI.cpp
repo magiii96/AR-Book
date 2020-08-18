@@ -136,7 +136,7 @@ struct EntryU5BU5D_t9FA9BC8E37D9A65FEA7CDE9E9D8BF84F6BE76AC0;
 // System.Collections.Generic.Dictionary`2/KeyCollection<System.Int32,UnityEngine.EventSystems.PointerEventData>
 struct KeyCollection_tDD03143C92B9ED1B27C4D6DED3D403861DA658D0;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int32,System.Object>
-struct ValueCollection_t19C23201FD11AE373C15EE2277543E87C2A30913;
+struct ValueCollection_t4F0931CDBEC78250B6593DE976E46E2179187225;
 // System.Collections.Generic.Dictionary`2/ValueCollection<System.Int32,UnityEngine.EventSystems.PointerEventData>
 struct ValueCollection_tB55394F384417AC8A8E53492B82E4C216B7FC23B;
 // System.Collections.Generic.Dictionary`2<System.Int32,System.Object>
@@ -1188,6 +1188,7 @@ IL2CPP_EXTERN_C const uint32_t Dropdown_SetAlpha_mEFF1F7A014A6A66AEFFA937DA3EE85
 IL2CPP_EXTERN_C const uint32_t Dropdown_Set_mB556E466A427314DC78F38EA38DB4462672B2A49_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Dropdown_SetupTemplate_m3F4C22ABEF75FEC05E3D42D277EF2299A7934E0C_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Dropdown_Show_m996910C935BA7D778E35EBAA55F1AC7299A0B3D9_MetadataUsageId;
+IL2CPP_EXTERN_C const uint32_t Dropdown_Start_m32F9113294B5F5EB5EFE41F9D2B6C49A516182E5_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Dropdown__cctor_mC1DD8DB000D6E2DCA6CD41C429DDF120B6535442_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Dropdown__ctor_m441023FADC43E0D5215546260F0230D92439AA9C_MetadataUsageId;
 IL2CPP_EXTERN_C const uint32_t Entry__ctor_m646E309104AA1D549A0C07B948BE183013A927BF_MetadataUsageId;
@@ -12427,9 +12428,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2_Add_mF7AEA0EFA07EEBC1A4B283
 // System.Boolean System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::Remove(!0)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Dictionary_2_Remove_m2204D6D532702FD13AB2A9AD8DB538E4E8FB1913_gshared (Dictionary_2_t03608389BB57475AA3F4B2B79D176A27807BC884 * __this, int32_t ___key0, const RuntimeMethod* method);
 // System.Collections.Generic.Dictionary`2/ValueCollection<!0,!1> System.Collections.Generic.Dictionary`2<System.Int32,System.Object>::get_Values()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueCollection_t19C23201FD11AE373C15EE2277543E87C2A30913 * Dictionary_2_get_Values_m07CB5FB90C539E49DBB6DFF53E2D791819568978_gshared (Dictionary_2_t03608389BB57475AA3F4B2B79D176A27807BC884 * __this, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ValueCollection_t4F0931CDBEC78250B6593DE976E46E2179187225 * Dictionary_2_get_Values_m07CB5FB90C539E49DBB6DFF53E2D791819568978_gshared (Dictionary_2_t03608389BB57475AA3F4B2B79D176A27807BC884 * __this, const RuntimeMethod* method);
 // System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<!0,!1> System.Collections.Generic.Dictionary`2/ValueCollection<System.Int32,System.Object>::GetEnumerator()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tA57C5B86634CF7247800165F33FEFD033C0AD7D6  ValueCollection_GetEnumerator_mE3FC38B611CBB8E3B330812AB32E6A9B58300C79_gshared (ValueCollection_t19C23201FD11AE373C15EE2277543E87C2A30913 * __this, const RuntimeMethod* method);
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Enumerator_tA57C5B86634CF7247800165F33FEFD033C0AD7D6  ValueCollection_GetEnumerator_mE3FC38B611CBB8E3B330812AB32E6A9B58300C79_gshared (ValueCollection_t4F0931CDBEC78250B6593DE976E46E2179187225 * __this, const RuntimeMethod* method);
 // !1 System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.Int32,System.Object>::get_Current()
 IL2CPP_EXTERN_C inline IL2CPP_METHOD_ATTR RuntimeObject * Enumerator_get_Current_m7478A1B54D9B92E960D1E1C1E95C475E4E6627F7_gshared_inline (Enumerator_tA57C5B86634CF7247800165F33FEFD033C0AD7D6 * __this, const RuntimeMethod* method);
 // System.Boolean System.Collections.Generic.Dictionary`2/ValueCollection/Enumerator<System.Int32,System.Object>::MoveNext()
@@ -33435,7 +33436,21 @@ IL_005e:
 // System.Void UnityEngine.UI.Dropdown::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dropdown_Start_m32F9113294B5F5EB5EFE41F9D2B6C49A516182E5 (Dropdown_tF6331401084B1213CAB10587A6EC81461501930F * __this, const RuntimeMethod* method)
 {
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
 	{
+		il2cpp_codegen_initialize_method (Dropdown_Start_m32F9113294B5F5EB5EFE41F9D2B6C49A516182E5_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		// m_AlphaTweenRunner = new TweenRunner<FloatTween>();
+		TweenRunner_1_tA7C92F52BF30E9A20EDA2DD956E11A1493D098EF * L_0 = (TweenRunner_1_tA7C92F52BF30E9A20EDA2DD956E11A1493D098EF *)il2cpp_codegen_object_new(TweenRunner_1_tA7C92F52BF30E9A20EDA2DD956E11A1493D098EF_il2cpp_TypeInfo_var);
+		TweenRunner_1__ctor_mBCECADAAC67B34851BF7AE7F23AAA7BEDD17CDAE(L_0, /*hidden argument*/TweenRunner_1__ctor_mBCECADAAC67B34851BF7AE7F23AAA7BEDD17CDAE_RuntimeMethod_var);
+		__this->set_m_AlphaTweenRunner_31(L_0);
+		// m_AlphaTweenRunner.Init(this);
+		TweenRunner_1_tA7C92F52BF30E9A20EDA2DD956E11A1493D098EF * L_1 = __this->get_m_AlphaTweenRunner_31();
+		NullCheck(L_1);
+		TweenRunner_1_Init_m36554C1037EC37B2D67A1BDE9B4D2407FE2C7657_inline(L_1, __this, /*hidden argument*/TweenRunner_1_Init_m36554C1037EC37B2D67A1BDE9B4D2407FE2C7657_RuntimeMethod_var);
 		// base.Start();
 		UIBehaviour_Start_m9717CD32EA9B3C678EB0D73CCF59C801C5E5207C(__this, /*hidden argument*/NULL);
 		// RefreshShownValue();

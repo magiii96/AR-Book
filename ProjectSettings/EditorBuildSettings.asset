@@ -14,9 +14,14 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/arthree.unity
     guid: 9c619aced85454f8eaf6974b35cd5c09
-  - enabled: 1
+  - enabled: 0
     path: Assets/arfour.unity
     guid: da9055cb649c3446b837261f9ef8956e
+  - enabled: 1
+    path: Assets/arfive.unity
+    guid: 6b62c9792449c48a5bb8ab86407b372c
   m_configObjects:
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: cdc6648376d0d4cac9dc01fe8719ad4d,
+      type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: b9e3590e52cf047948f87e59c6487f3c,
       type: 2}

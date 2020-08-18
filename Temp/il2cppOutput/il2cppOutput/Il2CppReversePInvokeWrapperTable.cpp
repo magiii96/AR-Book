@@ -20,8 +20,6 @@ struct String_t;
 // System.Void
 struct Void_t22962CB4C05B1D89B55A6E1139F0E87A90987017;
 
-struct EVENT_FILTER_DESCRIPTOR_t24FD3DB96806FFE8C96FFDB38B1B8331EA0D72BB ;
-struct Guid_t ;
 
 
 IL2CPP_EXTERN_C_BEGIN
@@ -315,15 +313,15 @@ public:
 };
 
 
-// UnityEngine.XR.ARSubsystems.AsyncCameraImageConversionStatus
-struct  AsyncCameraImageConversionStatus_tBB2E4F87A7456F29F7A329BE72CC3B671E3C625D 
+// UnityEngine.XR.ARSubsystems.XRCpuImage_AsyncConversionStatus
+struct  AsyncConversionStatus_t97637130FC574566C235D5D39674F2B1EBA11093 
 {
 public:
-	// System.Int32 UnityEngine.XR.ARSubsystems.AsyncCameraImageConversionStatus::value__
+	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage_AsyncConversionStatus::value__
 	int32_t ___value___2;
 
 public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(AsyncCameraImageConversionStatus_tBB2E4F87A7456F29F7A329BE72CC3B671E3C625D, ___value___2)); }
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(AsyncConversionStatus_t97637130FC574566C235D5D39674F2B1EBA11093, ___value___2)); }
 	inline int32_t get_value___2() const { return ___value___2; }
 	inline int32_t* get_address_of_value___2() { return &___value___2; }
 	inline void set_value___2(int32_t value)
@@ -333,15 +331,15 @@ public:
 };
 
 
-// UnityEngine.XR.ARSubsystems.CameraImageTransformation
-struct  CameraImageTransformation_t89BD7FC86526C731D32C36190C5317C9A7E1D24C 
+// UnityEngine.XR.ARSubsystems.XRCpuImage_Transformation
+struct  Transformation_t184DACB58B8B5553B44356A12F41F1985B96FB33 
 {
 public:
-	// System.Int32 UnityEngine.XR.ARSubsystems.CameraImageTransformation::value__
+	// System.Int32 UnityEngine.XR.ARSubsystems.XRCpuImage_Transformation::value__
 	int32_t ___value___2;
 
 public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(CameraImageTransformation_t89BD7FC86526C731D32C36190C5317C9A7E1D24C, ___value___2)); }
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(Transformation_t184DACB58B8B5553B44356A12F41F1985B96FB33, ___value___2)); }
 	inline int32_t get_value___2() const { return ___value___2; }
 	inline int32_t* get_address_of_value___2() { return &___value___2; }
 	inline void set_value___2(int32_t value)
@@ -351,21 +349,21 @@ public:
 };
 
 
-// UnityEngine.XR.ARSubsystems.XRCameraImageConversionParams
-struct  XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5 
+// UnityEngine.XR.ARSubsystems.XRCpuImage_ConversionParams
+struct  ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428 
 {
 public:
-	// UnityEngine.RectInt UnityEngine.XR.ARSubsystems.XRCameraImageConversionParams::m_InputRect
+	// UnityEngine.RectInt UnityEngine.XR.ARSubsystems.XRCpuImage_ConversionParams::m_InputRect
 	RectInt_t595A63F7EE2BC91A4D2DE5403C5FE94D3C3A6F7A  ___m_InputRect_0;
-	// UnityEngine.Vector2Int UnityEngine.XR.ARSubsystems.XRCameraImageConversionParams::m_OutputDimensions
+	// UnityEngine.Vector2Int UnityEngine.XR.ARSubsystems.XRCpuImage_ConversionParams::m_OutputDimensions
 	Vector2Int_t339DA203C037FA6BCFC926C36DC2194D52D5F905  ___m_OutputDimensions_1;
-	// UnityEngine.TextureFormat UnityEngine.XR.ARSubsystems.XRCameraImageConversionParams::m_Format
+	// UnityEngine.TextureFormat UnityEngine.XR.ARSubsystems.XRCpuImage_ConversionParams::m_Format
 	int32_t ___m_Format_2;
-	// UnityEngine.XR.ARSubsystems.CameraImageTransformation UnityEngine.XR.ARSubsystems.XRCameraImageConversionParams::m_Transformation
+	// UnityEngine.XR.ARSubsystems.XRCpuImage_Transformation UnityEngine.XR.ARSubsystems.XRCpuImage_ConversionParams::m_Transformation
 	int32_t ___m_Transformation_3;
 
 public:
-	inline static int32_t get_offset_of_m_InputRect_0() { return static_cast<int32_t>(offsetof(XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5, ___m_InputRect_0)); }
+	inline static int32_t get_offset_of_m_InputRect_0() { return static_cast<int32_t>(offsetof(ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428, ___m_InputRect_0)); }
 	inline RectInt_t595A63F7EE2BC91A4D2DE5403C5FE94D3C3A6F7A  get_m_InputRect_0() const { return ___m_InputRect_0; }
 	inline RectInt_t595A63F7EE2BC91A4D2DE5403C5FE94D3C3A6F7A * get_address_of_m_InputRect_0() { return &___m_InputRect_0; }
 	inline void set_m_InputRect_0(RectInt_t595A63F7EE2BC91A4D2DE5403C5FE94D3C3A6F7A  value)
@@ -373,7 +371,7 @@ public:
 		___m_InputRect_0 = value;
 	}
 
-	inline static int32_t get_offset_of_m_OutputDimensions_1() { return static_cast<int32_t>(offsetof(XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5, ___m_OutputDimensions_1)); }
+	inline static int32_t get_offset_of_m_OutputDimensions_1() { return static_cast<int32_t>(offsetof(ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428, ___m_OutputDimensions_1)); }
 	inline Vector2Int_t339DA203C037FA6BCFC926C36DC2194D52D5F905  get_m_OutputDimensions_1() const { return ___m_OutputDimensions_1; }
 	inline Vector2Int_t339DA203C037FA6BCFC926C36DC2194D52D5F905 * get_address_of_m_OutputDimensions_1() { return &___m_OutputDimensions_1; }
 	inline void set_m_OutputDimensions_1(Vector2Int_t339DA203C037FA6BCFC926C36DC2194D52D5F905  value)
@@ -381,7 +379,7 @@ public:
 		___m_OutputDimensions_1 = value;
 	}
 
-	inline static int32_t get_offset_of_m_Format_2() { return static_cast<int32_t>(offsetof(XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5, ___m_Format_2)); }
+	inline static int32_t get_offset_of_m_Format_2() { return static_cast<int32_t>(offsetof(ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428, ___m_Format_2)); }
 	inline int32_t get_m_Format_2() const { return ___m_Format_2; }
 	inline int32_t* get_address_of_m_Format_2() { return &___m_Format_2; }
 	inline void set_m_Format_2(int32_t value)
@@ -389,7 +387,7 @@ public:
 		___m_Format_2 = value;
 	}
 
-	inline static int32_t get_offset_of_m_Transformation_3() { return static_cast<int32_t>(offsetof(XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5, ___m_Transformation_3)); }
+	inline static int32_t get_offset_of_m_Transformation_3() { return static_cast<int32_t>(offsetof(ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428, ___m_Transformation_3)); }
 	inline int32_t get_m_Transformation_3() const { return ___m_Transformation_3; }
 	inline int32_t* get_address_of_m_Transformation_3() { return &___m_Transformation_3; }
 	inline void set_m_Transformation_3(int32_t value)
@@ -402,19 +400,17 @@ public:
 #pragma clang diagnostic pop
 #endif
 
-extern "C" void DEFAULT_CALL ReversePInvokeWrapper_EventProvider_EtwEnableCallBack_m32987ABF4E909DC5476F09C034714951CB4A8048(Guid_t * ___sourceId0, int32_t ___controlCode1, uint8_t ___setLevel2, int64_t ___anyKeyword3, int64_t ___allKeyword4, EVENT_FILTER_DESCRIPTOR_t24FD3DB96806FFE8C96FFDB38B1B8331EA0D72BB * ___filterData5, void* ___callbackContext6);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m056BCE43FF155AAE872FF7E565F8F72A50D26147(intptr_t ___arg0);
-extern "C" void DEFAULT_CALL ReversePInvokeWrapper_XRCameraImage_OnAsyncConversionComplete_m93E9CF213E901E687C4152D21FB53213F19AA3E5(int32_t ___status0, XRCameraImageConversionParams_t94D5A9992C6D9C03637B14C4399D4CAE35F899C5  ___conversionParams1, intptr_t ___dataPtr2, int32_t ___dataLength3, intptr_t ___context4);
-extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARCameraBackground_ResetGlState_m7495614B49BC284939A1AEED26A7CAED50B2D6B3(int32_t ___eventId0);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_XRCpuImage_OnAsyncConversionComplete_mE1632D9BCA9BB444DBB3283CBFE5567609FF98D0(int32_t ___status0, ConversionParams_tCEDC367E5590AF94C549B2678A546F14D11E6428  ___conversionParams1, intptr_t ___dataPtr2, int32_t ___dataLength3, intptr_t ___context4);
+extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARCameraBackground_BeforeBackgroundRenderHandler_m6EC38EE5CFE494BC2768C073966C88C2053E4118(int32_t ___eventId0);
 extern "C" void DEFAULT_CALL ReversePInvokeWrapper_ARKitSessionSubsystem_OnAsyncConversionComplete_mAF81D4ED67F8334B95C4376905DB2418863E3508(int32_t ___status0, int32_t ___worldMapId1, intptr_t ___context2);
 
 
 extern const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[];
-const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[5] = 
+const Il2CppMethodPointer g_ReversePInvokeWrapperPointers[4] = 
 {
-	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_EventProvider_EtwEnableCallBack_m32987ABF4E909DC5476F09C034714951CB4A8048),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_OSSpecificSynchronizationContext_InvocationEntry_m056BCE43FF155AAE872FF7E565F8F72A50D26147),
-	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_XRCameraImage_OnAsyncConversionComplete_m93E9CF213E901E687C4152D21FB53213F19AA3E5),
-	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARCameraBackground_ResetGlState_m7495614B49BC284939A1AEED26A7CAED50B2D6B3),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_XRCpuImage_OnAsyncConversionComplete_mE1632D9BCA9BB444DBB3283CBFE5567609FF98D0),
+	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARCameraBackground_BeforeBackgroundRenderHandler_m6EC38EE5CFE494BC2768C073966C88C2053E4118),
 	reinterpret_cast<Il2CppMethodPointer>(ReversePInvokeWrapper_ARKitSessionSubsystem_OnAsyncConversionComplete_mAF81D4ED67F8334B95C4376905DB2418863E3508),
 };

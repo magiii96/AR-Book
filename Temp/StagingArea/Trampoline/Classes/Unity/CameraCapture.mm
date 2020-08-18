@@ -619,6 +619,12 @@ extern "C" void UnityEnumVideoCaptureDevices(void* udata, void(*callback)(void* 
                 [CameraCaptureDevice addCameraCaptureDevice: device];
         }
     }
+
+    // we should not provide camera devices information while access has not been granted
+    // but we need to try to enumerate camera devices anyway to trigger permission request dialog
+    if ([AVCaptureDevice authorizationStatusForMediaType: AVMediaTypeVideo] != AVAuthorizationStatusAuthorized)
+        return;
+
     for (CameraCaptureDevice *cameraCaptureDevice in videoCaptureDevices)
     {
         int resCount = [cameraCaptureDevice->_resolutions count];

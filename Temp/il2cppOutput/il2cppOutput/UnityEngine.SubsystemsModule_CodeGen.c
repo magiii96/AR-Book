@@ -101,20 +101,26 @@ extern void IntegratedSubsystem_Start_m37CC4D2EEF19F87CC187680C29AADAB07B502786 
 extern void IntegratedSubsystem_Stop_m3A7F5B736EF2209500BE0A3EA463B77DAB2CECAF ();
 // 0x00000030 System.Void UnityEngine.IntegratedSubsystem::Destroy()
 extern void IntegratedSubsystem_Destroy_mB7476F3A7D56311C9A05D428CE8D378A71BEFD5D ();
-// 0x00000031 System.Void UnityEngine.IntegratedSubsystem::.ctor()
+// 0x00000031 System.Boolean UnityEngine.IntegratedSubsystem::get_running()
+extern void IntegratedSubsystem_get_running_m39FED0A48B27096E2957169B19712DFA11877624 ();
+// 0x00000032 System.Boolean UnityEngine.IntegratedSubsystem::get_valid()
+extern void IntegratedSubsystem_get_valid_mEB7685D79E82783866E96A2B3C1145868D8179EF ();
+// 0x00000033 System.Boolean UnityEngine.IntegratedSubsystem::Internal_IsRunning()
+extern void IntegratedSubsystem_Internal_IsRunning_m6473A064999C281A759E076BE65C16A0DB45A288 ();
+// 0x00000034 System.Void UnityEngine.IntegratedSubsystem::.ctor()
 extern void IntegratedSubsystem__ctor_mDBF83DF7F1F0B6DB1C64DD2C585E8A0CC7EE0EF1 ();
-// 0x00000032 System.Void UnityEngine.IntegratedSubsystem`1::.ctor()
-// 0x00000033 System.Void UnityEngine.Subsystem::Start()
-// 0x00000034 System.Void UnityEngine.Subsystem::Stop()
-// 0x00000035 System.Void UnityEngine.Subsystem::Destroy()
+// 0x00000035 System.Void UnityEngine.IntegratedSubsystem`1::.ctor()
+// 0x00000036 System.Void UnityEngine.Subsystem::Start()
+// 0x00000037 System.Void UnityEngine.Subsystem::Stop()
+// 0x00000038 System.Void UnityEngine.Subsystem::Destroy()
 extern void Subsystem_Destroy_m1D65C2E3B540A9EC80E14BF0C7A2BE8CDCF887A4 ();
-// 0x00000036 System.Boolean UnityEngine.Subsystem::get_running()
-// 0x00000037 System.Void UnityEngine.Subsystem::OnDestroy()
-// 0x00000038 System.Void UnityEngine.Subsystem::.ctor()
+// 0x00000039 System.Boolean UnityEngine.Subsystem::get_running()
+// 0x0000003A System.Void UnityEngine.Subsystem::OnDestroy()
+// 0x0000003B System.Void UnityEngine.Subsystem::.ctor()
 extern void Subsystem__ctor_m00FD26014DE966433A871B78ED54389E8DC59E94 ();
-// 0x00000039 TSubsystemDescriptor UnityEngine.Subsystem`1::get_SubsystemDescriptor()
-// 0x0000003A System.Void UnityEngine.Subsystem`1::.ctor()
-static Il2CppMethodPointer s_methodPointers[58] = 
+// 0x0000003C TSubsystemDescriptor UnityEngine.Subsystem`1::get_SubsystemDescriptor()
+// 0x0000003D System.Void UnityEngine.Subsystem`1::.ctor()
+static Il2CppMethodPointer s_methodPointers[61] = 
 {
 	NULL,
 	NULL,
@@ -164,6 +170,9 @@ static Il2CppMethodPointer s_methodPointers[58] =
 	IntegratedSubsystem_Start_m37CC4D2EEF19F87CC187680C29AADAB07B502786,
 	IntegratedSubsystem_Stop_m3A7F5B736EF2209500BE0A3EA463B77DAB2CECAF,
 	IntegratedSubsystem_Destroy_mB7476F3A7D56311C9A05D428CE8D378A71BEFD5D,
+	IntegratedSubsystem_get_running_m39FED0A48B27096E2957169B19712DFA11877624,
+	IntegratedSubsystem_get_valid_mEB7685D79E82783866E96A2B3C1145868D8179EF,
+	IntegratedSubsystem_Internal_IsRunning_m6473A064999C281A759E076BE65C16A0DB45A288,
 	IntegratedSubsystem__ctor_mDBF83DF7F1F0B6DB1C64DD2C585E8A0CC7EE0EF1,
 	NULL,
 	NULL,
@@ -175,7 +184,7 @@ static Il2CppMethodPointer s_methodPointers[58] =
 	NULL,
 	NULL,
 };
-static const int32_t s_InvokerIndices[58] = 
+static const int32_t s_InvokerIndices[61] = 
 {
 	14,
 	14,
@@ -198,21 +207,21 @@ static const int32_t s_InvokerIndices[58] =
 	-1,
 	-1,
 	-1,
-	1512,
+	1421,
 	3,
 	25,
 	18,
-	122,
+	111,
 	0,
 	3,
-	94,
-	1512,
+	109,
+	1421,
 	3,
-	1513,
+	1422,
 	18,
 	3,
 	3,
-	122,
+	111,
 	-1,
 	25,
 	3,
@@ -225,12 +234,15 @@ static const int32_t s_InvokerIndices[58] =
 	23,
 	23,
 	23,
+	102,
+	102,
+	102,
 	23,
 	-1,
 	23,
 	23,
 	23,
-	114,
+	102,
 	23,
 	23,
 	-1,
@@ -245,20 +257,20 @@ static const Il2CppTokenRangePair s_rgctxIndices[4] =
 };
 static const Il2CppRGCTXDefinition s_rgctxValues[8] = 
 {
-	{ (Il2CppRGCTXDataType)3, 21362 },
-	{ (Il2CppRGCTXDataType)2, 20074 },
-	{ (Il2CppRGCTXDataType)3, 21363 },
-	{ (Il2CppRGCTXDataType)2, 20078 },
-	{ (Il2CppRGCTXDataType)3, 21364 },
-	{ (Il2CppRGCTXDataType)2, 20089 },
-	{ (Il2CppRGCTXDataType)3, 21365 },
-	{ (Il2CppRGCTXDataType)2, 20098 },
+	{ (Il2CppRGCTXDataType)3, 15096 },
+	{ (Il2CppRGCTXDataType)2, 16282 },
+	{ (Il2CppRGCTXDataType)3, 15097 },
+	{ (Il2CppRGCTXDataType)2, 16286 },
+	{ (Il2CppRGCTXDataType)3, 15098 },
+	{ (Il2CppRGCTXDataType)2, 16297 },
+	{ (Il2CppRGCTXDataType)3, 15099 },
+	{ (Il2CppRGCTXDataType)2, 16306 },
 };
 extern const Il2CppCodeGenModule g_UnityEngine_SubsystemsModuleCodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_SubsystemsModuleCodeGenModule = 
 {
 	"UnityEngine.SubsystemsModule.dll",
-	58,
+	61,
 	s_methodPointers,
 	s_InvokerIndices,
 	0,

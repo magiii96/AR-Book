@@ -6,13 +6,13 @@
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEditor.PlayerSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.MonoBehaviour" preserve="nothing"/>
-		<type fullname="UnityEngine.Material" preserve="nothing"/>
+		<type fullname="UnityEngine.Shader" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.TextAsset" preserve="nothing"/>
-		<type fullname="UnityEngine.Shader" preserve="nothing"/>
 		<type fullname="UnityEditor.MonoScript" preserve="nothing"/>
 		<type fullname="UnityEditor.AudioManager" preserve="nothing"/>
 		<type fullname="UnityEditor.PhysicsManager" preserve="nothing"/>
+		<type fullname="UnityEngine.Material" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.InputManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
@@ -42,8 +42,9 @@
 		<type fullname="UnityEngine.Renderer" preserve="nothing"/>
 		<type fullname="UnityEngine.VFX.VisualEffectAsset" preserve="nothing"/>
 		<type fullname="UnityEngine.VFX.VisualEffectObject" preserve="nothing"/>
-		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 		<type fullname="UnityEngine.GameObject" preserve="nothing"/>
+		<type fullname="UnityEngine.Camera" preserve="nothing"/>
+		<type fullname="UnityEngine.Transform" preserve="nothing"/>
 		<type fullname="UnityEngine.RenderSettings" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
 		<type fullname="UnityEngine.Rigidbody" preserve="nothing"/>
@@ -52,7 +53,6 @@
 		<type fullname="UnityEngine.Light" preserve="nothing"/>
 		<type fullname="UnityEngine.Texture" preserve="nothing"/>
 		<type fullname="UnityEngine.Video.VideoClip" preserve="nothing"/>
-		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Mesh" preserve="nothing"/>
 		<type fullname="UnityEngine.MeshFilter" preserve="nothing"/>
 	</assembly>
@@ -61,7 +61,9 @@
 		<type fullname="UnityStandardAssets.CrossPlatformInput.MobileControlRig" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ARFeatheredPlaneMeshVisualizer" preserve="nothing"/>
 		<type fullname="Billboard" preserve="nothing"/>
+		<type fullname="FadePlaneOnBoundaryChange" preserve="nothing"/>
 		<type fullname="PlayerButton" preserve="nothing"/>
 		<type fullname="ReferencePointManager" preserve="nothing"/>
 		<type fullname="ReleaseButton" preserve="nothing"/>
@@ -71,7 +73,14 @@
 		<type fullname="TapToPlaceObject" preserve="nothing"/>
 		<type fullname="TrackedImageInfoMultipleManager" preserve="nothing"/>
 		<type fullname="TrackedObjectInfoManager" preserve="nothing"/>
+		<type fullname="adjustment" preserve="nothing"/>
+		<type fullname="collisiontest" preserve="nothing"/>
 		<type fullname="manController" preserve="nothing"/>
+	</assembly>
+	<assembly fullname="LeanTouch">
+		<type fullname="Lean.Touch.LeanPinchScale" preserve="nothing"/>
+		<type fullname="Lean.Touch.LeanTouch" preserve="nothing"/>
+		<type fullname="Lean.Touch.LeanTwistRotate" preserve="nothing"/>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerBitField" preserve="nothing"/>
@@ -100,19 +109,15 @@
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerVector4" preserve="nothing"/>
 		<type fullname="UnityEngine.Rendering.UI.UIFoldout" preserve="nothing"/>
 	</assembly>
-	<assembly fullname="Unity.TextMeshPro">
-		<type fullname="TMPro.TMP_ColorGradient" preserve="nothing"/>
-		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
-		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
-	</assembly>
 	<assembly fullname="Unity.XR.ARFoundation">
 		<type fullname="UnityEngine.XR.ARFoundation.ARAnchorManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraBackground" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARCameraManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARInputManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.AROcclusionManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlane" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneManager" preserve="nothing"/>
+		<type fullname="UnityEngine.XR.ARFoundation.ARPlaneMeshVisualizer" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARPoseDriver" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARRaycastManager" preserve="nothing"/>
 		<type fullname="UnityEngine.XR.ARFoundation.ARSession" preserve="nothing"/>

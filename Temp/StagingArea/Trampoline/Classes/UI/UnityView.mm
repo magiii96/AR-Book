@@ -27,6 +27,11 @@ extern bool _supportsMSAA;
     ReportSafeAreaChangeForView(self);
 }
 
+- (void)boundsUpdated
+{
+    [self onUpdateSurfaceSize: self.bounds.size];
+}
+
 - (void)initImpl:(CGRect)frame scaleFactor:(CGFloat)scale
 {
 #if !PLATFORM_TVOS

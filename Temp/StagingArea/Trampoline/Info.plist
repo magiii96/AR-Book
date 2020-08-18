@@ -31,6 +31,8 @@
     </dict>
     <key>NSCameraUsageDescription</key>
     <string>Required for augmented reality support.</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen-iPhone</string>
     <key>UILaunchStoryboardName~ipad</key>
     <string>LaunchScreen-iPad</string>
     <key>UILaunchStoryboardName~iphone</key>
@@ -41,8 +43,23 @@
     <false />
     <key>UIRequiredDeviceCapabilities</key>
     <array>
-      <string>armv7</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
+      <string>arm64</string>
       <string>arkit</string>
+      <string>arm64</string>
       <string>arkit</string>
     </array>
     <key>UIRequiresFullScreen</key>
