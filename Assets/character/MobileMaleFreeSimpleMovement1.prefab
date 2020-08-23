@@ -234,7 +234,7 @@ GameObject:
   - component: {fileID: 7849027208293169961}
   - component: {fileID: 7860460260251261757}
   m_Layer: 0
-  m_Name: C_man_1_FBX2013
+  m_Name: man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -21,7 +21,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 10684391757796194959
       m_GuidHigh: 5297798656349716104
-    m_Size: {x: 0.1, y: 0.054384615}
+    m_Size: {x: 0.15, y: 0.08157693}
     m_SpecifySize: 1
     m_Name: Castle
     m_Texture: {fileID: 0}
@@ -31,7 +31,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 13039889477444694134
       m_GuidHigh: 17299149617819641785
-    m_Size: {x: 0.1, y: 0.075}
+    m_Size: {x: 0.08, y: 0.06}
     m_SpecifySize: 1
     m_Name: ship
     m_Texture: {fileID: 0}
@@ -41,7 +41,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 4935423992489969673
       m_GuidHigh: 10136889482248348329
-    m_Size: {x: 0.1, y: 0.10428016}
+    m_Size: {x: 0.05, y: 0.05214008}
     m_SpecifySize: 1
     m_Name: GhostBook
     m_Texture: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 9569534837334185766
       m_GuidHigh: 1558355129040653785
-    m_Size: {x: 0.1, y: 0.0659271}
+    m_Size: {x: 0.13, y: 0.08570523}
     m_SpecifySize: 1
     m_Name: LondonOly
     m_Texture: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 9514835976223522622
       m_GuidHigh: 12732545029503492570
-    m_Size: {x: 0.1, y: 0.04769231}
+    m_Size: {x: 0.85, y: 0.40538463}
     m_SpecifySize: 1
     m_Name: Swimming
     m_Texture: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 4965916913726318913
       m_GuidHigh: 16764328509942682217
-    m_Size: {x: 0.1, y: 0.022528363}
+    m_Size: {x: 0.05, y: 0.011264182}
     m_SpecifySize: 1
     m_Name: side2
     m_Texture: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 6065854623866259195
       m_GuidHigh: 9939977154933736442
-    m_Size: {x: 0.1, y: 0.0646726}
+    m_Size: {x: 0.04, y: 0.025869038}
     m_SpecifySize: 1
     m_Name: Taxi
     m_Texture: {fileID: 0}
@@ -91,17 +91,17 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 8359648909995880844
       m_GuidHigh: 17418314784096474010
-    m_Size: {x: 0.1, y: 0.060355987}
+    m_Size: {x: 0.06, y: 0.03621359}
     m_SpecifySize: 1
     m_Name: FootGuard
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5730443755285355624
-      m_GuidHigh: 18062916484007990657
+      m_GuidLow: 5443133426462653546
+      m_GuidHigh: 14003239279310266248
     m_SerializedTextureGuid:
-      m_GuidLow: 14128873124096932130
-      m_GuidHigh: 8907867834549126347
-    m_Size: {x: 0.19, y: 0.1896955}
+      m_GuidLow: 4930247069119139066
+      m_GuidHigh: 12973377478874692600
+    m_Size: {x: 0.125, y: 0.08229167}
     m_SpecifySize: 1
-    m_Name: redbook
+    m_Name: TheO
     m_Texture: {fileID: 0}

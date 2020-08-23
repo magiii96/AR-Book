@@ -405,8 +405,8 @@ VisualEffectResource:
       attributes, stripData);\r\n\t\t\t\t\t\t#endif\r\n\t\t\t\t\t\t\t\r\n\t\t\t\tOrient_4(
       /*inout */attributes.axisX,  /*inout */attributes.axisY,  /*inout */attributes.axisZ);\n\t\t\t\t{\n\t\t\t\t   
       SetAttribute_3278B22F( /*inout */attributes.size, (float)0.0500000007);\n\t\t\t\t}\n\t\t\t\t{\n\t\t\t\t   
-      SetAttribute_FDD06EC7( /*inout */attributes.color, float3(106.264153, 63.3106003,
-      2.50622964));\n\t\t\t\t}\n\t\t\t\t\n\r\n\t\t\t\t\r\n\t\t\t#if !HAS_STRIPS\r\n\t\t\t\tif
+      SetAttribute_FDD06EC7( /*inout */attributes.color, float3(106.264145, 33.1827011,
+      0));\n\t\t\t\t}\n\t\t\t\t\n\r\n\t\t\t\t\r\n\t\t\t#if !HAS_STRIPS\r\n\t\t\t\tif
       (!attributes.alive)\r\n\t\t\t\t\treturn o;\r\n\t\t\t#endif\r\n\t\t\t\t\r\n\t\t\t#if
       VFX_PRIMITIVE_QUAD\r\n\t\t\t\r\n\t\t\t#if HAS_STRIPS\r\n\t\t\t#if VFX_STRIPS_UV_STRECHED\r\n\t\t\t\to.VFX_VARYING_UV.x
       = (float)(currentIndex) / (stripData.nextIndex - 1);\r\n\t\t\t#elif VFX_STRIPS_UV_PER_SEGMENT\r\n\t\t\t\to.VFX_VARYING_UV.x
@@ -1170,7 +1170,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 5
           m_Value: {x: 0, y: -0.001, z: 0}
         - m_ExpressionIndex: 12
-          m_Value: {x: 106.26415, y: 63.3106, z: 2.5062296}
+          m_Value: {x: 106.264145, y: 33.1827, z: 0}
         - m_ExpressionIndex: 18
           m_Value: {x: 0.333, y: 1.4, z: 0.333}
         - m_ExpressionIndex: 19
@@ -1202,33 +1202,33 @@ VisualEffectResource:
         - m_ExpressionIndex: 0
           m_Value:
             serializedVersion: 2
-            key0: {r: 1.2973534, g: 19.60445, b: 36.18174, a: 1}
-            key1: {r: 44.544952, g: 2.307109, b: 35.139046, a: 1}
-            key2: {r: 0, g: 0, b: 0, a: 0}
+            key0: {r: 0, g: 0.37886637, b: 39.780968, a: 1}
+            key1: {r: 0.10199461, g: 9.740485, b: 0.10199461, a: 1}
+            key2: {r: 7.9066987, g: 0, b: 0.9107192, a: 0}
             key3: {r: 0, g: 0, b: 0, a: 0}
             key4: {r: 0, g: 0, b: 0, a: 0}
             key5: {r: 0, g: 0, b: 0, a: 0}
             key6: {r: 0, g: 0, b: 0, a: 0}
             key7: {r: 0, g: 0, b: 0, a: 0}
             ctime0: 0
-            ctime1: 65535
-            ctime2: 0
+            ctime1: 14071
+            ctime2: 55127
             ctime3: 0
             ctime4: 0
             ctime5: 0
             ctime6: 0
             ctime7: 0
             atime0: 0
-            atime1: 52043
-            atime2: 65535
+            atime1: 65535
+            atime2: 0
             atime3: 0
             atime4: 0
             atime5: 0
             atime6: 0
             atime7: 0
             m_Mode: 0
-            m_NumColorKeys: 2
-            m_NumAlphaKeys: 3
+            m_NumColorKeys: 3
+            m_NumAlphaKeys: 2
       m_NamedObject:
         m_Array:
         - m_ExpressionIndex: 11
@@ -3359,7 +3359,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":106.26415252685547,"y":63.31060028076172,"z":2.5062296390533449}'
+      m_SerializableObject: '{"x":106.26414489746094,"y":33.182701110839847,"z":0.0}'
     m_Space: 2147483647
   m_Property:
     name: Color
@@ -4868,7 +4868,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Gradient, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"colorKeys":[{"color":{"r":1.2973533868789673,"g":19.604450225830079,"b":36.181739807128909,"a":1.0},"time":0.0},{"color":{"r":44.544952392578128,"g":2.3071091175079347,"b":35.13904571533203,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":0.7941252589225769},{"alpha":0.0,"time":1.0}],"gradientMode":0}'
+      m_SerializableObject: '{"colorKeys":[{"color":{"r":0.0,"g":0.37886637449264529,"b":39.780967712402347,"a":1.0},"time":0.0},{"color":{"r":0.10199461132287979,"g":9.740485191345215,"b":0.10199461132287979,"a":1.0},"time":0.21470969915390016},{"color":{"r":7.906698703765869,"g":0.0,"b":0.9107192158699036,"a":1.0},"time":0.8411840796470642}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}],"gradientMode":0}'
     m_Space: 2147483647
   m_Property:
     name: Color

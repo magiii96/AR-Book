@@ -18,8 +18,8 @@ public class TapToPlaceObject : MonoBehaviour
     [SerializeField]
     private Button startButton;
 
-    [SerializeField]
-    private Button finishButton;
+    // [SerializeField]
+    // private Button finishButton;
 
     [SerializeField]
     private Button CreateCharacter;
@@ -47,6 +47,11 @@ public class TapToPlaceObject : MonoBehaviour
     //private bool oneanchor = false;
     //private Vector3 anchorPosition;
 
+    private GameObject mobile ;
+    private GameObject StartMenu;
+    private GameObject MainMenu;
+    private GameObject Joystick;
+
 
 
     void Start()
@@ -56,19 +61,24 @@ public class TapToPlaceObject : MonoBehaviour
         arPlaneManager = FindObjectOfType<ARPlaneManager>();
         arAnchorManager = FindObjectOfType<ARAnchorManager>();
 
-        GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        mobile = GameObject.Find("MobileSingleStickControl");
+        MainMenu = mobile.transform.Find("MainMenu").gameObject;
+        StartMenu = mobile.transform.Find("StartMenu").gameObject;
+        Joystick = mobile.transform.Find("MobileJoystick").gameObject;
+
+        StartMenu.SetActive(true);
         MainMenu.SetActive(false);
+        Joystick.SetActive(false);
+
         startButton.onClick.AddListener(calibrationCoor);
         CreateCharacter.onClick.AddListener(CreateCha);
-        finishButton.onClick.AddListener(setMainMenu);
+        // finishButton.onClick.AddListener(setMainMenu);
         // ReleaseBoat = MainMenu.transform.Find("ReleaseBoat").gameObject;
         // ReleaseBoat.SetActive(false);
         // DriveBoat = MainMenu.transform.Find("DriveBoat").gameObject;
         // DriveBoat.SetActive(false);
       
-        //mobile.transform.GetChild(1).gameObject.SetActive(false);
-        //mobile.transform.GetChild(2).gameObject.SetActive(false);
+     
     }
 
     void Update()
@@ -133,33 +143,41 @@ public class TapToPlaceObject : MonoBehaviour
       
     }
 
-    private void setMainMenu(){
-        GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        GameObject StartMenu = mobile.transform.Find("StartMenu").gameObject;
-        StartMenu.SetActive(false);
-        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
-        GameObject indicator = GameObject.Find("Placement Indicator");
-        MainMenu.SetActive(true);
-        indicator.SetActive(true);
-        GameObject ReleaseBoat = MainMenu.transform.Find("ReleaseBoat").gameObject;
-        ReleaseBoat.SetActive(false);
-        GameObject DriveBoat = MainMenu.transform.Find("DriveBoat").gameObject;
-        DriveBoat.SetActive(false);
-      
-    }
+    // private void setMainMenu(){
+    //     GameObject mobile = GameObject.Find("MobileSingleStickControl");
+    //     GameObject StartMenu = mobile.transform.Find("StartMenu").gameObject;
+    //     StartMenu.SetActive(false);
+    //     GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
+    //     GameObject Joystick = mobile.transform.Find("MobileJoystick").gameObject;
+    //     GameObject indicator = GameObject.Find("Placement Indicator");
+    //     MainMenu.SetActive(true);
+    //     indicator.SetActive(true);
+    //     Joystick.SetActive(true);
+    //     GameObject BoatControl = MainMenu.transform.Find("BoatControl").gameObject;
+    //     BoatControl.SetActive(false);
+    // }
 
     private void calibrationCoor(){
-        GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        GameObject StartMenu = mobile.transform.Find("StartMenu").gameObject;
+        //active Finish Button
+        StartMenu.transform.Find("StartButton").gameObject.SetActive(false);
         StartMenu.transform.Find("Info").gameObject.SetActive(true);
         StartMenu.transform.Find("FinishButton").gameObject.SetActive(true);
-        //canchor = true;
+        //StartMenu.transform.Find("Info").gameObject.SetActive(true);
+        
+        //active the calibration UI
+        GameObject LeanTouch = GameObject.Find("LeanTouch");
+        LeanTouch.SetActive(true);
+        
+        //enable the image tracking and start the calibration.
+        arOrigin.GetComponent<ARTrackedImageManager>().enabled = true;
+        arOrigin.GetComponent<TrackedImageInfoMultipleManager>().enabled = true;
+        arOrigin.GetComponent<ARTrackedObjectManager>().enabled = true;
+        
     }
 
     private void CreateCha(){
+        // placementIndicator.SetActive(true);
         startmain = true;
-        GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
         MainMenu.transform.Find("CreateCharacter").gameObject.SetActive(false);
     }
 
@@ -192,14 +210,13 @@ public class TapToPlaceObject : MonoBehaviour
             ShipController shipc = shipObject.GetComponent<ShipController>();
             shipc.enabled = false;
             shipObject.GetComponent<Rigidbody>().isKinematic = true;
+            shipObject.SetActive(false);
         }
-        GameObject mobile = GameObject.Find("MobileSingleStickControl");
-        GameObject MainMenu = mobile.transform.Find("MainMenu").gameObject;
-        MainMenu.transform.Find("ReleaseBoat").gameObject.SetActive(false);
-        MainMenu.transform.Find("DriveBoat").gameObject.SetActive(false);
 
-        //mobile.transform.GetChild(1).gameObject.SetActive(false);
-        //mobile.transform.GetChild(2).gameObject.SetActive(false);
+        MainMenu.transform.Find("BoatControl").gameObject.SetActive(false);
+        Joystick.SetActive(false);
+       
+
         oneobject = false;
         characterOn = true;
         release = false;
@@ -218,6 +235,7 @@ public class TapToPlaceObject : MonoBehaviour
         if (shipObject != null){
             ShipController shipc = shipObject.GetComponent<ShipController>();
             shipc.enabled = true;
+            //change !!
             shipObject.GetComponent<Rigidbody>().isKinematic = false;
         }
         characterOn = true;
@@ -228,14 +246,10 @@ public class TapToPlaceObject : MonoBehaviour
     {
         Vector3 chaposition =new Vector3(PlacementPose.position.x,PlacementPose.position.y,PlacementPose.position.z);
         GameObject chaClone = (GameObject) Instantiate(character, chaposition, PlacementPose.rotation);
+        Joystick.SetActive(true);
         chaClone.name = "character";
     }
 
-    private void PlaceAnchor(){
-
-        
-
-    }
 
     private void UpdatePlacementIndicator()
     {

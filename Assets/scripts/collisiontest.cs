@@ -6,16 +6,21 @@ public class collisiontest : MonoBehaviour
 {
     [SerializeField]
     private GameObject showobject;
+    [SerializeField]
+    private Text imagetext;
 
-    void OnCollisionEnter(Collision col){
+
+    void OnTriggerEnter(Collider col){
         if(col.gameObject.name == "character"){
             showobject.SetActive(true);
+            imagetext.text = "turn off light";
         }
         
     }
-    void OnCollisionExit(Collision col){
+    void OnTriggerExit(Collider col){
         if(col.gameObject.name == "character"){
             showobject.SetActive(false);
+            imagetext.text = "";
         }
     }
 }
