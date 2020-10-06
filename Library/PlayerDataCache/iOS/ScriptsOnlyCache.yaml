@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - ARFeatheredPlaneMeshVisualizer
     - Billboard
     - FadePlaneOnBoundaryChange
+    - ImageTrigger
     - PlayerButton
     - ReferencePointManager
     - ReleaseButton
@@ -303,6 +304,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 16070}
     - Class: 114
       Script: {instanceID: 16076}
+    - Class: 114
+      Script: {instanceID: 71490}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2128,6 +2131,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: VFXUISliderBinder
+  - hash:
+      serializedVersion: 2
+      Hash: a82f105a1dd6e282f9c606f6d2b18f53
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ImageTrigger
   platform: 9
   scenePathNames:
   - Assets/allscene/arfinal.unity
