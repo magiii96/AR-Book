@@ -10,8 +10,13 @@ public class ImageTrigger : MonoBehaviour
 
     private Vector3 cameraPosition;
     private GameObject ARcamera;
+    //[SerializeField]
+    //private Text imageTrackedText;
+
     [SerializeField]
-    private Text imageTrackedText;
+    private Toggle BridgeImg_Toggle;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -23,33 +28,40 @@ public class ImageTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float mindis = 1000;
-        string minname = "";
-        cameraPosition = ARcamera.transform.position;
+        if(BridgeImg_Toggle.isOn){
+            float mindis = 1000;
+            string minname = "";
+            cameraPosition = ARcamera.transform.position;
 
-        foreach (Transform eachChild in transform) {
-            float imagedist = Vector3.Distance(eachChild.position, cameraPosition);
-            if(imagedist < mindis){
-                mindis = imagedist;
-                minname = eachChild.name;
-            }    
-        }
-        imageTrackedText.text =  minname;
-
-        foreach (Transform eachChild in transform) {
-            GameObject bridgeimg = eachChild.gameObject;
-            //MeshRenderer m =bridgeimg.GetComponent<MeshRenderer>();
-            if(eachChild.name == minname){
-                bridgeimg.SetActive(true);
-                //m.enabled = true;
-            }else{
-                bridgeimg.SetActive(false);
-                //m.enabled = false;
+            foreach (Transform eachChild in transform) {
+                float imagedist = Vector3.Distance(eachChild.position, cameraPosition);
+                if(imagedist < mindis){
+                    mindis = imagedist;
+                    minname = eachChild.name;
+                }    
             }
-        }
+            //imageTrackedText.text =  minname;
+
+            foreach (Transform eachChild in transform) {
+                GameObject bridgeimg = eachChild.gameObject;
+                //MeshRenderer m =bridgeimg.GetComponent<MeshRenderer>();
+                if(eachChild.name == minname){
+                    bridgeimg.SetActive(true);
+                    //m.enabled = true;
+                }else{
+                    bridgeimg.SetActive(false);
+                    //m.enabled = false;
+                }
+            }
         //GameObject shownimage = gameobject.transform.Find(minname);
-       
-        
      
+        }else{
+            foreach (Transform eachChild in transform) {
+                GameObject bridgeimg = eachChild.gameObject;
+                bridgeimg.SetActive(false);
+            }
+
+        }
+        
     }
 }

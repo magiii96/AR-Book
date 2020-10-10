@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - ARFeatheredPlaneMeshVisualizer
     - Billboard
+    - ControlIndicator
     - FadePlaneOnBoundaryChange
     - ImageTrigger
     - PlayerButton
@@ -235,77 +236,79 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13568}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13592}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13678}
+      Script: {instanceID: 13632}
     - Class: 114
-      Script: {instanceID: 13812}
+      Script: {instanceID: 13680}
     - Class: 114
-      Script: {instanceID: 13868}
+      Script: {instanceID: 13814}
     - Class: 114
-      Script: {instanceID: 13952}
+      Script: {instanceID: 13870}
     - Class: 114
-      Script: {instanceID: 14146}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 14254}
+      Script: {instanceID: 14148}
     - Class: 114
-      Script: {instanceID: 14288}
+      Script: {instanceID: 14256}
     - Class: 114
-      Script: {instanceID: 14314}
+      Script: {instanceID: 14290}
     - Class: 114
-      Script: {instanceID: 14336}
+      Script: {instanceID: 14316}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14338}
     - Class: 114
-      Script: {instanceID: 14500}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 14518}
+      Script: {instanceID: 14502}
     - Class: 114
-      Script: {instanceID: 14532}
+      Script: {instanceID: 14520}
     - Class: 114
-      Script: {instanceID: 14540}
+      Script: {instanceID: 14534}
     - Class: 114
-      Script: {instanceID: 14714}
+      Script: {instanceID: 14542}
     - Class: 114
-      Script: {instanceID: 14734}
+      Script: {instanceID: 14716}
     - Class: 114
-      Script: {instanceID: 14930}
+      Script: {instanceID: 14736}
     - Class: 114
-      Script: {instanceID: 14994}
+      Script: {instanceID: 14932}
     - Class: 114
-      Script: {instanceID: 15008}
+      Script: {instanceID: 14996}
     - Class: 114
-      Script: {instanceID: 15046}
+      Script: {instanceID: 15010}
     - Class: 114
-      Script: {instanceID: 15086}
+      Script: {instanceID: 15048}
     - Class: 114
-      Script: {instanceID: 15214}
+      Script: {instanceID: 15088}
     - Class: 114
-      Script: {instanceID: 15324}
+      Script: {instanceID: 15216}
     - Class: 114
-      Script: {instanceID: 15390}
+      Script: {instanceID: 15326}
     - Class: 114
-      Script: {instanceID: 15520}
+      Script: {instanceID: 15392}
     - Class: 114
-      Script: {instanceID: 15592}
+      Script: {instanceID: 15522}
     - Class: 114
-      Script: {instanceID: 15684}
+      Script: {instanceID: 15594}
     - Class: 114
-      Script: {instanceID: 15764}
+      Script: {instanceID: 15686}
     - Class: 114
-      Script: {instanceID: 15862}
+      Script: {instanceID: 15766}
     - Class: 114
-      Script: {instanceID: 15868}
+      Script: {instanceID: 15864}
     - Class: 114
-      Script: {instanceID: 15930}
+      Script: {instanceID: 15870}
     - Class: 114
-      Script: {instanceID: 16070}
+      Script: {instanceID: 15932}
     - Class: 114
-      Script: {instanceID: 16076}
+      Script: {instanceID: 16072}
     - Class: 114
-      Script: {instanceID: 71490}
+      Script: {instanceID: 16078}
+    - Class: 114
+      Script: {instanceID: 36986}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1239,6 +1242,12 @@ ScriptsOnlyBuild:
     className: LandingGear
   - hash:
       serializedVersion: 2
+      Hash: caa2a25c513dced322130b9d6181f0ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ImageTrigger
+  - hash:
+      serializedVersion: 2
       Hash: b79cc055d056555f42c5f7bce7cd1456
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2133,11 +2142,11 @@ ScriptsOnlyBuild:
     className: VFXUISliderBinder
   - hash:
       serializedVersion: 2
-      Hash: a82f105a1dd6e282f9c606f6d2b18f53
+      Hash: caa2a25c513dced322130b9d6181f0ac
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ImageTrigger
+    className: ControlIndicator
   platform: 9
   scenePathNames:
   - Assets/allscene/arfinal.unity
-  playerPath: /Users/maggie/Desktop/arlast
+  playerPath: /Users/maggie/Desktop/ardebug
